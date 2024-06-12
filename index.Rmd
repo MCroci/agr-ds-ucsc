@@ -1,6 +1,6 @@
 ---
-title: "Agricultural data science"
-author: "Michele Croci"
+title: "Laboratorio di agronomia di precisione"
+author: "Michele Croci & .."
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -15,7 +15,7 @@ link-citations: yes
 github-repo: rstudio/bookdown-demo
 ---
 
-# Preface
+# Prefazione
 
 Welcome to a journey at the intersection of programming, data science, and agronomy. This book presents hands-on coding exercises designed to address common tasks in crop and soil sciences.
 
@@ -48,6 +48,6 @@ The goal of this book is to make you a **competent** (based on the [Dreyfus scal
 I truly hope you find both learning and enjoyment in these pages. Happy coding!
 
 **Michele Croci** \
-Associate Professor in Agronomy & Field Crops\
+Assistant Professor in Agronomy & Field Crops\
 Department of Sustainable Crop Production\
 Università Cattolica del Sacro Cuore
