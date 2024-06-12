@@ -48,6 +48,6 @@ The goal of this book is to make you a **competent** (based on the [Dreyfus scal
 I truly hope you find both learning and enjoyment in these pages. Happy coding!
 
 **Michele Croci** \
-Associate Professor in Agronomy & Field Crops\
+Assistant Professor in Agronomy & Field Crops\
 Department of Sustainable Crop Production\
 Università Cattolica del Sacro Cuore

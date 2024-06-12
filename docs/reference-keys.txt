@@ -22,10 +22,3 @@ sharing-your-book
 publishing
 pages
 metadata-for-sharing
-url-your-book-url-like-httpsbookdown.orgyihuibookdown
-subtraction
-multiplication
-division
-integer-division-floor-division-equivalent
-exponentiation
-modulus
