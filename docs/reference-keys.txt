@@ -2,12 +2,11 @@ fig:nice-fig
 tab:nice-tab
 eq:binom
 thm:tri
-about
-usage
-render-book
-preview-book
-hello-bookdown
+preface
+agronomia
 a-section
+a-section-1
+a-section-2
 cross
 chapters-and-sub-chapters
 captioned-figures-and-tables
@@ -23,3 +22,10 @@ sharing-your-book
 publishing
 pages
 metadata-for-sharing
+url-your-book-url-like-httpsbookdown.orgyihuibookdown
+subtraction
+multiplication
+division
+integer-division-floor-division-equivalent
+exponentiation
+modulus
