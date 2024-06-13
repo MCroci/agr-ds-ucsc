@@ -1,6 +1,10 @@
-# Concetti base di programmazione {#cross}
+# Modelli di simulazione delle colture
 
-Cross-references make it easier for your readers to find and link to elements in your book.
+Un modello, nella sua accezione più ampia, è una rappresentazione semplificata di un sistema ben delimitato nel mondo reale. In agricoltura, ad esempio, una coltura con i suoi organi e processi rappresenta un sistema complesso. Negli ultimi anni, i modelli di simulazione della crescita delle colture hanno acquisito un ruolo cruciale negli studi e nelle applicazioni agrometeorologiche, consentendo di analizzare il comportamento delle colture e la loro risposta all'ambiente circostante.
+
+Una delle caratteristiche distintive di questi modelli è la loro capacità di fornire risultati validi anche in contesti agronomici, colturali e gestionali diversi da quelli in cui sono stati originariamente sviluppati. Questa versatilità ha elevato la modellistica a strumento complementare ideale alla sperimentazione tradizionale.
+
+In generale, la costruzione di un modello consiste nell'identificazione di un insieme di equazioni matematiche che riproducano nel modo più accurato possibile il comportamento del sistema in esame.
 
 ## Chapters and sub-chapters
 
