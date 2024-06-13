@@ -102,7 +102,7 @@
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{5}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 \newlength{\csllabelwidth}
@@ -134,77 +134,107 @@
 \urlstyle{same}
 \hypersetup{
   pdftitle={Laboratorio di agronomia di precisione},
-  pdfauthor={Michele Croci \& ..},
+  pdfauthor={Michele Croci},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
 \title{Laboratorio di agronomia di precisione}
-\author{Michele Croci \& ..}
-\date{2024-06-12}
+\author{Michele Croci}
+\date{2024-06-13}
 
-\usepackage{amsthm}
-\newtheorem{theorem}{Theorem}[chapter]
-\newtheorem{lemma}{Lemma}[chapter]
-\newtheorem{corollary}{Corollary}[chapter]
-\newtheorem{proposition}{Proposition}[chapter]
-\newtheorem{conjecture}{Conjecture}[chapter]
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[chapter]
-\theoremstyle{definition}
-\newtheorem{example}{Example}[chapter]
-\theoremstyle{definition}
-\newtheorem{exercise}{Exercise}[chapter]
-\theoremstyle{definition}
-\newtheorem{hypothesis}{Hypothesis}[chapter]
-\theoremstyle{remark}
-\newtheorem*{remark}{Remark}
-\newtheorem*{solution}{Solution}
 \begin{document}
+\frontmatter
 \maketitle
 
-{
-\setcounter{tocdepth}{1}
-\tableofcontents
-}
+\mainmatter
 \hypertarget{prefazione}{%
 \chapter{Prefazione}\label{prefazione}}
 
-Welcome to a journey at the intersection of programming, data science, and agronomy. This book presents hands-on coding exercises designed to address common tasks in crop and soil sciences.
+Benvenuti in un viaggio entusiasmante, dove scienza dei dati, statistica
+e agronomia si incontrano per rivoluzionare il futuro dell'agricoltura.
+Questo corso introduttivo, progettato per studenti di agronomia e
+scienze del suolo, vi guiderà attraverso esercitazioni pratiche di
+analisi dati per affrontare le sfide quotidiane nel campo della ricerca
+e della produzione agricola.
 
-Coding is an essential component of modern scientific research that enables more creative solutions, in-depth analyses, and ensures reproducibility of findings. This material is part of an introductory graduate level course offered to students in plant and soil sciences with little or no coding experience. Anyone with sufficient motivation, discipline, and interest in learning how to code and adopt reproducible research practices should (hopefully) find this content useful. The material is aimed at students that are transitioning from spreadsheets analysis to a programming environemnt and that first need to learn basic building blocks before tackling more complicated challenges. With most datasets in a tabular format, the material is easily accessible and inspectable using common spreadsheet software.
+L'analisi dei dati è diventata un pilastro fondamentale nella scienza
+moderna, aprendo nuove strade per soluzioni innovative, analisi
+approfondite e la garanzia di risultati riproducibili. Questo materiale,
+appositamente creato per studenti con poca o nessuna esperienza di
+analisi dati, vi accompagnerà passo dopo passo in questa avventura,
+partendo dai concetti base fino a raggiungere un livello di competenza
+che vi permetterà di esplorare, visualizzare, modellare e interpretare
+dati complessi.
 
-I selected Python because of its accessibility (it's free), straightforward syntax, multi-purpose applications (data analysis, desktop applications, websites, games), widespread adoption in the scientific community, and a rich ecosystem of tools for reproducible research that makes the transition into the coding world a lot easier to beginners. The code presented here is complemented by live coding lectures and might not always reflect the most efficient or `pythonic' methods. The goal is to present clear and explicit code to gradually familiarize students with the Python syntax, documentation resources, and improve the process of breaking down problems into a sequence of smaller logical steps to ultimately reach more advanced and elegant coding. This book strives for a balanced approach, blending task complexity with a judicious use of libraries. While libraries enhance reproducibility and benefit from extensive testing of the community, an overreliance on them can hinder beginners from truly grasping the underlying concepts and logic of programming.
+R, il linguaggio scelto per questo percorso, è rinomato per la sua
+potenza nel campo della statistica e dell'analisi dati, nonché per la
+sua vasta adozione nella comunità scientifica. Grazie ad un ricco
+ecosistema di pacchetti e strumenti dedicati, R rende l'analisi dei dati
+accessibile e potente. Il codice presentato, affiancato da lezioni
+pratiche, vi familiarizzerà gradualmente con la sintassi di R, le sue
+funzioni principali e l'arte di trasformare dati grezzi in informazioni
+significative.
 
-The motivation for these notes stem from the need to increase coding literacy in students pursuing a career in agricultural sciences. With the rise of sensor technology and the expanding volume of data in agronomic decision-making, scientific programming has become indispensable for agriscientists analyzing, interpreting, and communicating data and research findings. This material addresses three key gaps:
+Il nostro obiettivo è quello di fornire un approccio equilibrato,
+combinando la complessità delle analisi con un uso oculato dei
+pacchetti. Sebbene i pacchetti offrano indubbi vantaggi in termini di
+efficienza e funzionalità, un eccessivo affidamento ad essi può
+ostacolare la comprensione dei concetti fondamentali dell'analisi dati.
+Attraverso l'utilizzo di dati reali provenienti da studi e progetti di
+ricerca, questo corso colma il divario tra teoria e pratica, offrendo
+esempi concreti e applicabili per consolidare le vostre competenze.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  A scarcity of online resources with real agricultural datasets. This series uses data from peer-reviewed studies and research projects, offering practical and applicable examples that bridge theory and practice.
-\item
-  Existing coding resources often target either a general audience or advanced students in computer science, leaving a void for agronomy students and early career scientists in agricultural sciences that are new to coding.
-\item
-  Aiming to provide concise, interactive, and well-documented Jupyter notebooks, this material is readily accessible via platforms like \href{https://github.com/}{Github} and \href{https://mybinder.org/}{Binder}.
-\end{enumerate}
+Nel corso della mia carriera, ho sperimentato in prima persona come
+l'analisi dei dati possa rivelare pattern nascosti, guidare decisioni
+informate e fornire una comprensione più profonda dei fenomeni
+agronomici. Spero sinceramente che possiate trovare in queste pagine non
+solo un percorso di apprendimento, ma anche un'autentica passione per
+l'analisi dei dati.
 
-During my own journey in graduate school, coding was a powerful tool for enhancing logical thinking, deconstructing complex problems into manageable steps, and sharpening my focus on details that initially seemed inconsequential. Code brought to life abstract concepts and equations that appeared in manuscripts and books, making intricate processes more tangible and comprehensible.
+Benvenuti nel mondo dell'analisi dati applicata all'agronomia. Buon
+divertimento!Benvenuti in un viaggio entusiasmante, dove scienza dei
+dati, statistica e agronomia si incontrano per rivoluzionare il futuro
+dell'agricoltura. Questo corso introduttivo, progettato per studenti di
+agronomia e scienze del suolo, vi guiderà attraverso esercitazioni
+pratiche di analisi dati per affrontare le sfide quotidiane nel campo
+della ricerca e della produzione agricola.
 
-As a faculty member, coding has reshaped the way I interact with students. Code reveals the student's reasoning process and allows me to connect with the student logical (or sometimes illogical) thought process. This way I can somewhat get into the student's head and correct misconceptions. Collaborative coding has become one of the most fulfilling aspects of my academic career.
+L'analisi dei dati è diventata un pilastro fondamentale nella scienza
+moderna, aprendo nuove strade per soluzioni innovative, analisi
+approfondite e la garanzia di risultati riproducibili. Questo materiale,
+appositamente creato per studenti con poca o nessuna esperienza di
+analisi dati, vi accompagnerà passo dopo passo in questa avventura,
+partendo dai concetti base fino a raggiungere un livello di competenza
+che vi permetterà di esplorare, visualizzare, modellare e interpretare
+dati complessi.
 
-The goal of this book is to make you a \textbf{competent} (based on the \href{https://doi.org/10.1177/0270467604264992}{Dreyfus scale}) python programmer, meaning that you will be able to automate simple tasks, analyze datasets, and create reproducible and logical code that supports scientific claims in the domain of agricultural sciences. Students who successfully complete the material will be able to:
+R, il linguaggio scelto per questo percorso, è rinomato per la sua
+potenza nel campo della statistica e dell'analisi dati, nonché per la
+sua vasta adozione nella comunità scientifica. Grazie ad un ricco
+ecosistema di pacchetti e strumenti dedicati, R rende l'analisi dei dati
+accessibile e potente. Il codice presentato, affiancato da lezioni
+pratiche, vi familiarizzerà gradualmente con la sintassi di R, le sue
+funzioni principali e l'arte di trasformare dati grezzi in informazioni
+significative.
 
-\begin{itemize}
-\item
-  construct effective, well-documented, and error-free scripts and functions.
-\item
-  apply high-level programming to generate publication-quality figures and optimize simple models.
-\item
-  find information independently for self-teaching and problem solving.
-\item
-  learn good programming habits and basic reproducible research practices by following short exercises using real data.
-\end{itemize}
+Il nostro obiettivo è quello di fornire un approccio equilibrato,
+combinando la complessità delle analisi con un uso oculato dei
+pacchetti. Sebbene i pacchetti offrano indubbi vantaggi in termini di
+efficienza e funzionalità, un eccessivo affidamento ad essi può
+ostacolare la comprensione dei concetti fondamentali dell'analisi dati.
+Attraverso l'utilizzo di dati reali provenienti da studi e progetti di
+ricerca, questo corso colma il divario tra teoria e pratica, offrendo
+esempi concreti e applicabili per consolidare le vostre competenze.
 
-I truly hope you find both learning and enjoyment in these pages. Happy coding!
+Nel corso della mia carriera, ho sperimentato in prima persona come
+l'analisi dei dati possa rivelare pattern nascosti, guidare decisioni
+informate e fornire una comprensione più profonda dei fenomeni
+agronomici. Spero sinceramente che possiate trovare in queste pagine non
+solo un percorso di apprendimento, ma anche un'autentica passione per
+l'analisi dei dati.
+
+Benvenuti nel mondo dell'analisi dati applicata all'agronomia. Buon
+divertimento!
 
 \textbf{Michele Croci}\\
 Assistant Professor in Agronomy \& Field Crops\\
@@ -217,57 +247,172 @@ Università Cattolica del Sacro Cuore
 \hypertarget{introduzione}{%
 \section{Introduzione}\label{introduzione}}
 
-Il corso di coltivazioni erbacee mira a fornire una conoscenza approfondita delle tecniche colturali relative alle specie erbacee di pieno campo, evidenziandone l'importanza nel contesto agricolo italiano ed europeo. L'obiettivo principale è acquisire competenze nella gestione delle principali coltivazioni, tenendo conto non solo degli aspetti economici, sempre più influenzati dal mercato globale, ma anche dell'impatto ambientale delle scelte colturali.
+Il corso di coltivazioni erbacee mira a fornire una conoscenza
+approfondita delle tecniche colturali relative alle specie erbacee di
+pieno campo, evidenziandone l'importanza nel contesto agricolo italiano
+ed europeo. L'obiettivo principale è acquisire competenze nella gestione
+delle principali coltivazioni, tenendo conto non solo degli aspetti
+economici, sempre più influenzati dal mercato globale, ma anche
+dell'impatto ambientale delle scelte colturali.
 
-Le \textbf{coltivazioni erbacee} sono estremamente diversificate e possono essere classificate in base a diversi criteri: - \textbf{Utilizzo finale}: cereali da olio, cereali da zucchero, ecc. - \textbf{Parte della pianta utilizzata:} fusto, radice, foglie, ecc. - \textbf{Tipo di coltivazione:} sarchiato, non sarchiato, ecc. - \textbf{Tradizionalità e innovazione:} colture tradizionali, alternative, o tradizionali con usi alternativi. - \textbf{Destinazione:} colture alimentari e non alimentari. - \textbf{Idoneità al set-aside:} colture coltivabili in regime di set-aside.
+Le \textbf{coltivazioni erbacee} sono estremamente diversificate e
+possono essere classificate in base a diversi criteri: -
+\textbf{Utilizzo finale}: cereali da olio, cereali da zucchero, ecc. -
+\textbf{Parte della pianta utilizzata:} fusto, radice, foglie, ecc. -
+\textbf{Tipo di coltivazione:} sarchiato, non sarchiato, ecc. -
+\textbf{Tradizionalità e innovazione:} colture tradizionali,
+alternative, o tradizionali con usi alternativi. -
+\textbf{Destinazione:} colture alimentari e non alimentari. -
+\textbf{Idoneità al set-aside:} colture coltivabili in regime di
+set-aside.
 
-Gli \textbf{obiettivi primari} delle coltivazioni erbacee sono molteplici: - Massimizzazione delle rese - Ottimizzazione della qualità (ad esempio, contenuto proteico o oleico dei semi) - Massimizzazione del reddito Efficienza nell'uso dei fattori produttivi - Minimizzazione dell'impatto ambientale
+Gli \textbf{obiettivi primari} delle coltivazioni erbacee sono
+molteplici: - Massimizzazione delle rese - Ottimizzazione della qualità
+(ad esempio, contenuto proteico o oleico dei semi) - Massimizzazione del
+reddito Efficienza nell'uso dei fattori produttivi - Minimizzazione
+dell'impatto ambientale
 
-L'agricoltura, nel corso della storia, ha permesso lo sviluppo della civiltà umana. Oggi, tuttavia, le scelte agricole devono considerare non solo la produttività, ma anche la sostenibilità ambientale. L'agricoltura moderna deve trovare un equilibrio tra la necessità di nutrire una popolazione in crescita e la salvaguardia dell'ambiente. L'inquinamento e il cambiamento climatico sono sfide cruciali che richiedono un approccio più sostenibile, come l'agricoltura integrata, che mira a ridurre l'impatto ambientale pur mantenendo rese soddisfacenti.
+L'agricoltura, nel corso della storia, ha permesso lo sviluppo della
+civiltà umana. Oggi, tuttavia, le scelte agricole devono considerare non
+solo la produttività, ma anche la sostenibilità ambientale.
+L'agricoltura moderna deve trovare un equilibrio tra la necessità di
+nutrire una popolazione in crescita e la salvaguardia dell'ambiente.
+L'inquinamento e il cambiamento climatico sono sfide cruciali che
+richiedono un approccio più sostenibile, come l'agricoltura integrata,
+che mira a ridurre l'impatto ambientale pur mantenendo rese
+soddisfacenti.
 
-L'agricoltura, oltre a essere un settore economico fondamentale, svolge un ruolo cruciale nella produzione di cibo, nella salvaguardia del territorio e nella tutela dell'ambiente. Negli ultimi anni, l'importanza dell'agricoltura non alimentare e della bioeconomia è cresciuta notevolmente. Le piante non vengono più utilizzate solo per scopi alimentari, ma anche per la produzione di biogas, biocarburanti, medicine, tessuti e altri materiali.
+L'agricoltura, oltre a essere un settore economico fondamentale, svolge
+un ruolo cruciale nella produzione di cibo, nella salvaguardia del
+territorio e nella tutela dell'ambiente. Negli ultimi anni, l'importanza
+dell'agricoltura non alimentare e della bioeconomia è cresciuta
+notevolmente. Le piante non vengono più utilizzate solo per scopi
+alimentari, ma anche per la produzione di biogas, biocarburanti,
+medicine, tessuti e altri materiali.
 
-Storicamente, l'agricoltura ha rappresentato il settore economico principale, impiegando una vasta percentuale della popolazione. Nei paesi sviluppati, questa percentuale è diminuita nel tempo, ma l'agricoltura rimane il settore primario, responsabile della produzione di cibo. A livello globale, l'agricoltura contribuisce in media per circa il 6\% al PIL, mentre nei paesi sviluppati questa percentuale scende all'1-2\%.
+Storicamente, l'agricoltura ha rappresentato il settore economico
+principale, impiegando una vasta percentuale della popolazione. Nei
+paesi sviluppati, questa percentuale è diminuita nel tempo, ma
+l'agricoltura rimane il settore primario, responsabile della produzione
+di cibo. A livello globale, l'agricoltura contribuisce in media per
+circa il 6\% al PIL, mentre nei paesi sviluppati questa percentuale
+scende all'1-2\%.
 
-I cereali, in particolare \textbf{frumento e riso}, sono fondamentali nell'alimentazione umana, fornendo circa il 46\% delle calorie a livello globale. Le proteine animali contribuiscono per il 17\% all'apporto calorico, mentre cereali e prodotti animali forniscono rispettivamente il 42\% e il 39\% delle proteine nella dieta umana.
+I cereali, in particolare \textbf{frumento e riso}, sono fondamentali
+nell'alimentazione umana, fornendo circa il 46\% delle calorie a livello
+globale. Le proteine animali contribuiscono per il 17\% all'apporto
+calorico, mentre cereali e prodotti animali forniscono rispettivamente
+il 42\% e il 39\% delle proteine nella dieta umana.
 
-L'agricoltura contemporanea si trova ad affrontare la sfida di soddisfare i bisogni alimentari di una popolazione mondiale in crescita, che si prevede raggiungerà i 9 miliardi entro il 2050 e i 10 miliardi entro il 2100. Le sfide principali includono:
+L'agricoltura contemporanea si trova ad affrontare la sfida di
+soddisfare i bisogni alimentari di una popolazione mondiale in crescita,
+che si prevede raggiungerà i 9 miliardi entro il 2050 e i 10 miliardi
+entro il 2100. Le sfide principali includono:
 
-Aumentare la produzione di cibo: per far fronte alla crescita demografica e combattere la malnutrizione, che è un problema non solo di quantità ma anche di qualità della dieta. Produrre materie prime ed energia: sviluppare colture per usi non alimentari, come la produzione di biocarburanti e biomateriali. Limitare il degrado ambientale: adottare pratiche agricole sostenibili per ridurre l'impatto ambientale dell'agricoltura. Per aumentare la produzione agricola, sono state considerate diverse opzioni:
+Aumentare la produzione di cibo: per far fronte alla crescita
+demografica e combattere la malnutrizione, che è un problema non solo di
+quantità ma anche di qualità della dieta. Produrre materie prime ed
+energia: sviluppare colture per usi non alimentari, come la produzione
+di biocarburanti e biomateriali. Limitare il degrado ambientale:
+adottare pratiche agricole sostenibili per ridurre l'impatto ambientale
+dell'agricoltura. Per aumentare la produzione agricola, sono state
+considerate diverse opzioni:
 
-Espansione delle terre coltivate: questa opzione è stata scartata a causa del suo impatto negativo sull'ambiente, in particolare sulla deforestazione. Sfruttamento degli stock ittici: questa opzione presenta limitazioni a causa della capacità limitata degli ecosistemi marini. Aumento dei limiti di produzione: questa opzione è complessa e richiede un'attenta valutazione dei rischi ambientali e sanitari. Riduzione degli sprechi alimentari: questa opzione è considerata la più promettente e sostenibile, poiché una quantità significativa di cibo viene sprecata lungo la catena alimentare. La soluzione più efficace e sostenibile per aumentare la produzione agricola è il miglioramento dell'efficienza. Ciò significa ottimizzare l'uso delle risorse, come acqua, fertilizzanti e pesticidi, per ottenere rese più elevate senza aumentare l'impatto ambientale. La ricerca e lo sviluppo tecnologico svolgono un ruolo cruciale in questo processo, consentendo di sviluppare nuove varietà colturali, tecniche di coltivazione e sistemi di gestione più efficienti.
+Espansione delle terre coltivate: questa opzione è stata scartata a
+causa del suo impatto negativo sull'ambiente, in particolare sulla
+deforestazione. Sfruttamento degli stock ittici: questa opzione presenta
+limitazioni a causa della capacità limitata degli ecosistemi marini.
+Aumento dei limiti di produzione: questa opzione è complessa e richiede
+un'attenta valutazione dei rischi ambientali e sanitari. Riduzione degli
+sprechi alimentari: questa opzione è considerata la più promettente e
+sostenibile, poiché una quantità significativa di cibo viene sprecata
+lungo la catena alimentare. La soluzione più efficace e sostenibile per
+aumentare la produzione agricola è il miglioramento dell'efficienza. Ciò
+significa ottimizzare l'uso delle risorse, come acqua, fertilizzanti e
+pesticidi, per ottenere rese più elevate senza aumentare l'impatto
+ambientale. La ricerca e lo sviluppo tecnologico svolgono un ruolo
+cruciale in questo processo, consentendo di sviluppare nuove varietà
+colturali, tecniche di coltivazione e sistemi di gestione più
+efficienti.
 
-Lo studio di Chen et al.~(2011) sulla \textbf{gestione integrata suolo-coltura (ISSM)} per la sicurezza alimentare ha evidenziato l'importanza di un uso efficiente delle risorse per incrementare la produzione agricola e garantire la sicurezza alimentare. La ricerca sottolinea come l'adozione di nuove tecnologie e genotipi possa essere più complessa nei paesi più poveri (ad esempio, l'Africa subsahariana) rispetto a quelli in rapido sviluppo (ad esempio, la Cina).
+Lo studio di Chen et al.~(2011) sulla \textbf{gestione integrata
+suolo-coltura (ISSM)} per la sicurezza alimentare ha evidenziato
+l'importanza di un uso efficiente delle risorse per incrementare la
+produzione agricola e garantire la sicurezza alimentare. La ricerca
+sottolinea come l'adozione di nuove tecnologie e genotipi possa essere
+più complessa nei paesi più poveri (ad esempio, l'Africa subsahariana)
+rispetto a quelli in rapido sviluppo (ad esempio, la Cina).
 
-In Cina, nonostante l'ampio utilizzo di OGM, fertilizzanti e prodotti fitosanitari, l'efficienza produttiva risulta spesso limitata. Ad esempio, un aumento del 50\% nell'uso di fertilizzanti ha portato ad un incremento della produzione di appena il 10\%. Per affrontare questa sfida, Chen e i suoi colleghi hanno sviluppato un modello che, basandosi sugli input agronomici, permette di calcolare la biomassa ottenibile. Il modello include un modulo per la simulazione del suolo e un altro per la simulazione della coltura, considerando anche l'accrescimento radicale delle piante nel bilancio idrico e dell'azoto. L'analisi climatica si basa su medie a lungo termine.
+In Cina, nonostante l'ampio utilizzo di OGM, fertilizzanti e prodotti
+fitosanitari, l'efficienza produttiva risulta spesso limitata. Ad
+esempio, un aumento del 50\% nell'uso di fertilizzanti ha portato ad un
+incremento della produzione di appena il 10\%. Per affrontare questa
+sfida, Chen e i suoi colleghi hanno sviluppato un modello che, basandosi
+sugli input agronomici, permette di calcolare la biomassa ottenibile. Il
+modello include un modulo per la simulazione del suolo e un altro per la
+simulazione della coltura, considerando anche l'accrescimento radicale
+delle piante nel bilancio idrico e dell'azoto. L'analisi climatica si
+basa su medie a lungo termine.
 
-Attraverso simulazioni e confronti con le pratiche agricole effettive, i ricercatori hanno identificato combinazioni ottimali di input per massimizzare la produzione. In linea con i grafici di Tilman, lo studio conferma che, a parità di risorse, un utilizzo più efficiente di queste ultime può portare a notevoli miglioramenti nella produzione.
+Attraverso simulazioni e confronti con le pratiche agricole effettive, i
+ricercatori hanno identificato combinazioni ottimali di input per
+massimizzare la produzione. In linea con i grafici di Tilman, lo studio
+conferma che, a parità di risorse, un utilizzo più efficiente di queste
+ultime può portare a notevoli miglioramenti nella produzione.
 
-In particolare, la \textbf{gestione dell'azoto} emerge come un fattore cruciale. Il modello suggerisce non solo di bilanciare l'azoto in base agli input e agli output, ma anche di frazionare la sua applicazione, concentrando le dosi maggiori nelle fasi di rapido accrescimento della pianta. Il calcolo del bilancio dell'azoto deve considerare la coltura specifica, le asportazioni, l'area coltivata e le aspettative di produzione.
+In particolare, la \textbf{gestione dell'azoto} emerge come un fattore
+cruciale. Il modello suggerisce non solo di bilanciare l'azoto in base
+agli input e agli output, ma anche di frazionare la sua applicazione,
+concentrando le dosi maggiori nelle fasi di rapido accrescimento della
+pianta. Il calcolo del bilancio dell'azoto deve considerare la coltura
+specifica, le asportazioni, l'area coltivata e le aspettative di
+produzione.
 
-I risultati delle prove condotte in Cina dimostrano l'importanza di un uso efficiente dell'azoto. Ad esempio, una coltura di mais gestita con approcci ISSM (237 kg/ha di azoto e pratiche agricole avanzate) ha prodotto in media 13 t/ha, dimostrando una buona efficienza d'uso dell'azoto. Al contrario, una coltura fertilizzata con dosi eccessive di azoto (747 kg/ha), ma senza una gestione efficiente del sistema, ha prodotto solo 15,2 t/ha, evidenziando una scarsa efficienza d'uso.
+I risultati delle prove condotte in Cina dimostrano l'importanza di un
+uso efficiente dell'azoto. Ad esempio, una coltura di mais gestita con
+approcci ISSM (237 kg/ha di azoto e pratiche agricole avanzate) ha
+prodotto in media 13 t/ha, dimostrando una buona efficienza d'uso
+dell'azoto. Al contrario, una coltura fertilizzata con dosi eccessive di
+azoto (747 kg/ha), ma senza una gestione efficiente del sistema, ha
+prodotto solo 15,2 t/ha, evidenziando una scarsa efficienza d'uso.
 
-In conclusione, lo studio di Chen et al.~(2011) sottolinea l'importanza di adottare un \textbf{approccio integrato} nella gestione del sistema suolo-coltura per massimizzare la produzione agricola e garantire la sicurezza alimentare. L'ottimizzazione dell'uso delle risorse, in particolare dell'azoto, e l'adozione di pratiche agricole efficienti sono fondamentali per raggiungere questo obiettivo.
+In conclusione, lo studio di Chen et al.~(2011) sottolinea l'importanza
+di adottare un \textbf{approccio integrato} nella gestione del sistema
+suolo-coltura per massimizzare la produzione agricola e garantire la
+sicurezza alimentare. L'ottimizzazione dell'uso delle risorse, in
+particolare dell'azoto, e l'adozione di pratiche agricole efficienti
+sono fondamentali per raggiungere questo obiettivo.
+
+\hypertarget{cereali}{%
+\section{Cereali}\label{cereali}}
 
 \hypertarget{frumento}{%
-\section{Frumento}\label{frumento}}
+\subsection{Frumento}\label{frumento}}
 
 \hypertarget{riso}{%
-\section{Riso}\label{riso}}
+\subsection{Riso}\label{riso}}
 
 \hypertarget{orzo}{%
-\section{Orzo}\label{orzo}}
+\subsection{Orzo}\label{orzo}}
 
 \hypertarget{erba-medica}{%
-\section{Erba medica}\label{erba-medica}}
+\subsection{Erba medica}\label{erba-medica}}
 
 \hypertarget{mais}{%
-\section{Mais}\label{mais}}
+\subsection{Mais}\label{mais}}
+
+\hypertarget{bilancio-analitico-fertilizzazione-azotata}{%
+\section{Bilancio analitico fertilizzazione
+azotata}\label{bilancio-analitico-fertilizzazione-azotata}}
+
+\hypertarget{bilancio-idrico}{%
+\section{Bilancio idrico}\label{bilancio-idrico}}
 
 \hypertarget{cross}{%
 \chapter{Concetti base di programmazione}\label{cross}}
 
-Cross-references make it easier for your readers to find and link to elements in your book.
+Cross-references make it easier for your readers to find and link to
+elements in your book.
 
 \hypertarget{chapters-and-sub-chapters}{%
 \section{Chapters and sub-chapters}\label{chapters-and-sub-chapters}}
@@ -283,17 +428,24 @@ There are two steps to cross-reference any heading:
   \begin{itemize}
   \tightlist
   \item
-    Leave the label off if you like the automated heading generated based on your heading title: for example, \texttt{\#\ Hello\ world} = \texttt{\#\ Hello\ world\ \{\#hello-world\}}.
+    Leave the label off if you like the automated heading generated
+    based on your heading title: for example, \texttt{\#\ Hello\ world}
+    = \texttt{\#\ Hello\ world\ \{\#hello-world\}}.
   \item
-    To label an un-numbered heading, use: \texttt{\#\ Hello\ world\ \{-\#nice-label\}} or \texttt{\{\#\ Hello\ world\ .unnumbered\}}.
+    To label an un-numbered heading, use:
+    \texttt{\#\ Hello\ world\ \{-\#nice-label\}} or
+    \texttt{\{\#\ Hello\ world\ .unnumbered\}}.
   \end{itemize}
 \item
-  Next, reference the labeled heading anywhere in the text using \texttt{\textbackslash{}@ref(nice-label)}; for example, please see Chapter \ref{cross}.
+  Next, reference the labeled heading anywhere in the text using
+  \texttt{\textbackslash{}@ref(nice-label)}; for example, please see
+  Chapter @ref(cross).
 
   \begin{itemize}
   \tightlist
   \item
-    If you prefer text as the link instead of a numbered reference use: \protect\hyperlink{cross}{any text you want can go here}.
+    If you prefer text as the link instead of a numbered reference use:
+    \protect\hyperlink{cross}{any text you want can go here}.
   \end{itemize}
 \end{enumerate}
 
@@ -375,11 +527,15 @@ There are two steps to cross-reference any heading:
 \end{verbatim}
 
 \hypertarget{captioned-figures-and-tables}{%
-\section{Captioned figures and tables}\label{captioned-figures-and-tables}}
+\section{Captioned figures and
+tables}\label{captioned-figures-and-tables}}
 
-Figures and tables \emph{with captions} can also be cross-referenced from elsewhere in your book using \texttt{\textbackslash{}@ref(fig:chunk-label)} and \texttt{\textbackslash{}@ref(tab:chunk-label)}, respectively.
+Figures and tables \emph{with captions} can also be cross-referenced
+from elsewhere in your book using
+\texttt{\textbackslash{}@ref(fig:chunk-label)} and
+\texttt{\textbackslash{}@ref(tab:chunk-label)}, respectively.
 
-See Figure \ref{fig:nice-fig}.
+See Figure @ref(fig:nice-fig).
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -397,7 +553,7 @@ See Figure \ref{fig:nice-fig}.
 \caption{Here is a nice figure!}\label{fig:nice-fig}
 \end{figure}
 
-Don't miss Table \ref{tab:nice-tab}.
+Don't miss Table @ref(tab:nice-tab).
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -408,39 +564,48 @@ Don't miss Table \ref{tab:nice-tab}.
 \end{Highlighting}
 \end{Shaded}
 
-\begin{table}
-
-\caption{\label{tab:nice-tab}Here is a nice table!}
-\centering
-\begin{tabular}[t]{rr}
-\toprule
-temperature & pressure\\
-\midrule
-0 & 0.0002\\
-20 & 0.0012\\
-40 & 0.0060\\
-60 & 0.0300\\
-80 & 0.0900\\
-\addlinespace
-100 & 0.2700\\
-120 & 0.7500\\
-140 & 1.8500\\
-160 & 4.2000\\
-180 & 8.8000\\
-\bottomrule
-\end{tabular}
-\end{table}
+\begin{longtable}[]{@{}rr@{}}
+\caption{Here is a nice table!}\tabularnewline
+\toprule\noalign{}
+temperature & pressure \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+temperature & pressure \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+0 & 0.0002 \\
+20 & 0.0012 \\
+40 & 0.0060 \\
+60 & 0.0300 \\
+80 & 0.0900 \\
+100 & 0.2700 \\
+120 & 0.7500 \\
+140 & 1.8500 \\
+160 & 4.2000 \\
+180 & 8.8000 \\
+\end{longtable}
 
 \hypertarget{parts}{%
 \chapter{Parts}\label{parts}}
 
-You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file.
+You can add parts to organize one or more book chapters together. Parts
+can be inserted at the top of an .Rmd file, before the first-level
+chapter heading in that same file.
 
-Add a numbered part: \texttt{\#\ (PART)\ Act\ one\ \{-\}} (followed by \texttt{\#\ A\ chapter})
+Add a numbered part: \texttt{\#\ (PART)\ Act\ one\ \{-\}} (followed by
+\texttt{\#\ A\ chapter})
 
-Add an unnumbered part: \texttt{\#\ (PART\textbackslash{}*)\ Act\ one\ \{-\}} (followed by \texttt{\#\ A\ chapter})
+Add an unnumbered part:
+\texttt{\#\ (PART\textbackslash{}*)\ Act\ one\ \{-\}} (followed by
+\texttt{\#\ A\ chapter})
 
-Add an appendix as a special kind of un-numbered part: \texttt{\#\ (APPENDIX)\ Other\ stuff\ \{-\}} (followed by \texttt{\#\ A\ chapter}). Chapters in an appendix are prepended with letters instead of numbers.
+Add an appendix as a special kind of un-numbered part:
+\texttt{\#\ (APPENDIX)\ Other\ stuff\ \{-\}} (followed by
+\texttt{\#\ A\ chapter}). Chapters in an appendix are prepended with
+letters instead of numbers.
 
 \hypertarget{footnotes-and-citations}{%
 \chapter{Footnotes and citations}\label{footnotes-and-citations}}
@@ -448,17 +613,26 @@ Add an appendix as a special kind of un-numbered part: \texttt{\#\ (APPENDIX)\ O
 \hypertarget{footnotes}{%
 \section{Footnotes}\label{footnotes}}
 
-Footnotes are put inside the square brackets after a caret \texttt{\^{}{[}{]}}. Like this one \footnote{This is a footnote.}.
+Footnotes are put inside the square brackets after a caret
+\texttt{\^{}{[}{]}}. Like this one \footnote{This is a footnote.}.
 
 \hypertarget{citations}{%
 \section{Citations}\label{citations}}
 
 Reference items in your bibliography file(s) using \texttt{@key}.
 
-For example, we are using the \textbf{bookdown} package (\protect\hyperlink{ref-R-bookdown}{Xie 2024}) (check out the last code chunk in index.Rmd to see how this citation key was added) in this sample book, which was built on top of R Markdown and \textbf{knitr} (\protect\hyperlink{ref-xie2015}{Xie 2015}) (this citation was added manually in an external file book.bib).
-Note that the \texttt{.bib} files need to be listed in the index.Rmd with the YAML \texttt{bibliography} key.
+For example, we are using the \textbf{bookdown} package
+(\protect\hyperlink{ref-R-bookdown}{Xie 2024}) (check out the last code
+chunk in index.Rmd to see how this citation key was added) in this
+sample book, which was built on top of R Markdown and \textbf{knitr}
+(\protect\hyperlink{ref-xie2015}{Xie 2015}) (this citation was added
+manually in an external file book.bib). Note that the \texttt{.bib}
+files need to be listed in the index.Rmd with the YAML
+\texttt{bibliography} key.
 
-The RStudio Visual Markdown Editor can also make it easier to insert citations: \url{https://rstudio.github.io/visual-markdown-editing/\#/citations}
+The RStudio Visual Markdown Editor can also make it easier to insert
+citations:
+\url{https://rstudio.github.io/visual-markdown-editing/\#/citations}
 
 \hypertarget{blocks}{%
 \chapter{Blocks}\label{blocks}}
@@ -470,28 +644,33 @@ Here is an equation.
 
 \begin{equation} 
   f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
-  \label{eq:binom}
+  (\#eq:binom)
 \end{equation}
 
-You may refer to using \texttt{\textbackslash{}@ref(eq:binom)}, like see Equation \eqref{eq:binom}.
+You may refer to using \texttt{\textbackslash{}@ref(eq:binom)}, like see
+Equation @ref(eq:binom).
 
 \hypertarget{theorems-and-proofs}{%
 \section{Theorems and proofs}\label{theorems-and-proofs}}
 
-Labeled theorems can be referenced in text using \texttt{\textbackslash{}@ref(thm:tri)}, for example, check out this smart theorem \ref{thm:tri}.
+Labeled theorems can be referenced in text using
+\texttt{\textbackslash{}@ref(thm:tri)}, for example, check out this
+smart theorem @ref(thm:tri).
 
-\begin{theorem}
-\protect\hypertarget{thm:tri}{}\label{thm:tri}For a right triangle, if \(c\) denotes the \emph{length} of the hypotenuse
-and \(a\) and \(b\) denote the lengths of the \textbf{other} two sides, we have
-\[a^2 + b^2 = c^2\]
-\end{theorem}
+\leavevmode\vadjust pre{\hypertarget{tri}{}}%
+For a right triangle, if \(c\) denotes the \emph{length} of the
+hypotenuse and \(a\) and \(b\) denote the lengths of the \textbf{other}
+two sides, we have \[a^2 + b^2 = c^2\]
 
-Read more here \url{https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html}.
+Read more here
+\url{https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html}.
 
 \hypertarget{callout-blocks}{%
 \section{Callout blocks}\label{callout-blocks}}
 
-The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: \url{https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html}
+The R Markdown Cookbook provides more help on how to use custom blocks
+to design your own callouts:
+\url{https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html}
 
 \hypertarget{sharing-your-book}{%
 \chapter{Sharing your book}\label{sharing-your-book}}
@@ -499,21 +678,34 @@ The R Markdown Cookbook provides more help on how to use custom blocks to design
 \hypertarget{publishing}{%
 \section{Publishing}\label{publishing}}
 
-HTML books can be published online, see: \url{https://bookdown.org/yihui/bookdown/publishing.html}
+HTML books can be published online, see:
+\url{https://bookdown.org/yihui/bookdown/publishing.html}
 
 \hypertarget{pages}{%
 \section{404 pages}\label{pages}}
 
-By default, users will be directed to a 404 page if they try to access a webpage that cannot be found. If you'd like to customize your 404 page instead of using the default, you may add either a \texttt{\_404.Rmd} or \texttt{\_404.md} file to your project root and use code and/or Markdown syntax.
+By default, users will be directed to a 404 page if they try to access a
+webpage that cannot be found. If you'd like to customize your 404 page
+instead of using the default, you may add either a \texttt{\_404.Rmd} or
+\texttt{\_404.md} file to your project root and use code and/or Markdown
+syntax.
 
 \hypertarget{metadata-for-sharing}{%
 \section{Metadata for sharing}\label{metadata-for-sharing}}
 
-Bookdown HTML books will provide HTML metadata for social sharing on platforms like Twitter, Facebook, and LinkedIn, using information you provide in the \texttt{index.Rmd} YAML. To setup, set the \texttt{url} for your book and the path to your \texttt{cover-image} file. Your book's \texttt{title} and \texttt{description} are also used.
+Bookdown HTML books will provide HTML metadata for social sharing on
+platforms like Twitter, Facebook, and LinkedIn, using information you
+provide in the \texttt{index.Rmd} YAML. To setup, set the \texttt{url}
+for your book and the path to your \texttt{cover-image} file. Your
+book's \texttt{title} and \texttt{description} are also used.
 
-This \texttt{gitbook} uses the same social sharing data across all chapters in your book- all links shared will look the same.
+This \texttt{gitbook} uses the same social sharing data across all
+chapters in your book- all links shared will look the same.
 
-Specify your book's source repository on GitHub using the \texttt{edit} key under the configuration options in the \texttt{\_output.yml} file, which allows users to suggest an edit by linking to a chapter's source file.
+Specify your book's source repository on GitHub using the \texttt{edit}
+key under the configuration options in the \texttt{\_output.yml} file,
+which allows users to suggest an edit by linking to a chapter's source
+file.
 
 Read more about the features of this output format here:
 
@@ -533,21 +725,34 @@ Or use:
 \hypertarget{publishing-1}{%
 \section{Publishing}\label{publishing-1}}
 
-HTML books can be published online, see: \url{https://bookdown.org/yihui/bookdown/publishing.html}
+HTML books can be published online, see:
+\url{https://bookdown.org/yihui/bookdown/publishing.html}
 
 \hypertarget{pages-1}{%
 \section{404 pages}\label{pages-1}}
 
-By default, users will be directed to a 404 page if they try to access a webpage that cannot be found. If you'd like to customize your 404 page instead of using the default, you may add either a \texttt{\_404.Rmd} or \texttt{\_404.md} file to your project root and use code and/or Markdown syntax.
+By default, users will be directed to a 404 page if they try to access a
+webpage that cannot be found. If you'd like to customize your 404 page
+instead of using the default, you may add either a \texttt{\_404.Rmd} or
+\texttt{\_404.md} file to your project root and use code and/or Markdown
+syntax.
 
 \hypertarget{metadata-for-sharing-1}{%
 \section{Metadata for sharing}\label{metadata-for-sharing-1}}
 
-Bookdown HTML books will provide HTML metadata for social sharing on platforms like Twitter, Facebook, and LinkedIn, using information you provide in the \texttt{index.Rmd} YAML. To setup, set the \texttt{url} for your book and the path to your \texttt{cover-image} file. Your book's \texttt{title} and \texttt{description} are also used.
+Bookdown HTML books will provide HTML metadata for social sharing on
+platforms like Twitter, Facebook, and LinkedIn, using information you
+provide in the \texttt{index.Rmd} YAML. To setup, set the \texttt{url}
+for your book and the path to your \texttt{cover-image} file. Your
+book's \texttt{title} and \texttt{description} are also used.
 
-This \texttt{gitbook} uses the same social sharing data across all chapters in your book- all links shared will look the same.
+This \texttt{gitbook} uses the same social sharing data across all
+chapters in your book- all links shared will look the same.
 
-Specify your book's source repository on GitHub using the \texttt{edit} key under the configuration options in the \texttt{\_output.yml} file, which allows users to suggest an edit by linking to a chapter's source file.
+Specify your book's source repository on GitHub using the \texttt{edit}
+key under the configuration options in the \texttt{\_output.yml} file,
+which allows users to suggest an edit by linking to a chapter's source
+file.
 
 Read more about the features of this output format here:
 
@@ -564,11 +769,14 @@ Or use:
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
 \leavevmode\vadjust pre{\hypertarget{ref-xie2015}{}}%
-Xie, Yihui. 2015. \emph{Dynamic Documents with {R} and Knitr}. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. \url{http://yihui.org/knitr/}.
+Xie, Yihui. 2015. \emph{Dynamic Documents with {R} and Knitr}. 2nd ed.
+Boca Raton, Florida: Chapman; Hall/CRC. \url{http://yihui.org/knitr/}.
 
 \leavevmode\vadjust pre{\hypertarget{ref-R-bookdown}{}}%
----------. 2024. \emph{Bookdown: Authoring Books and Technical Documents with r Markdown}. \url{https://github.com/rstudio/bookdown}.
+---------. 2024. \emph{Bookdown: Authoring Books and Technical Documents
+with r Markdown}. \url{https://github.com/rstudio/bookdown}.
 
 \end{CSLReferences}
 
+\backmatter
 \end{document}

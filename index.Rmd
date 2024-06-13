@@ -1,6 +1,6 @@
 ---
 title: "Laboratorio di agronomia di precisione"
-author: "Michele Croci & .."
+author: "Michele Croci"
 date: '`r Sys.Date()`'
 output: pdf_document
 documentclass: book
