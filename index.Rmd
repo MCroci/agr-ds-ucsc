@@ -18,17 +18,7 @@ site: bookdown::bookdown_site
 
 # Prefazione
 
-Benvenuti in un viaggio entusiasmante, dove scienza dei dati, statistica e agronomia si incontrano per rivoluzionare il futuro dell'agricoltura. Questo corso introduttivo, progettato per studenti di agronomia e scienze del suolo, vi guiderà attraverso esercitazioni pratiche di analisi dati per affrontare le sfide quotidiane nel campo della ricerca e della produzione agricola.
-
-L'analisi dei dati è diventata un pilastro fondamentale nella scienza moderna, aprendo nuove strade per soluzioni innovative, analisi approfondite e la garanzia di risultati riproducibili. Questo materiale, appositamente creato per studenti con poca o nessuna esperienza di analisi dati, vi accompagnerà passo dopo passo in questa avventura, partendo dai concetti base fino a raggiungere un livello di competenza che vi permetterà di esplorare, visualizzare, modellare e interpretare dati complessi.
-
-R, il linguaggio scelto per questo percorso, è rinomato per la sua potenza nel campo della statistica e dell'analisi dati, nonché per la sua vasta adozione nella comunità scientifica. Grazie ad un ricco ecosistema di pacchetti e strumenti dedicati, R rende l'analisi dei dati accessibile e potente. Il codice presentato, affiancato da lezioni pratiche, vi familiarizzerà gradualmente con la sintassi di R, le sue funzioni principali e l'arte di trasformare dati grezzi in informazioni significative.
-
-Il nostro obiettivo è quello di fornire un approccio equilibrato, combinando la complessità delle analisi con un uso oculato dei pacchetti. Sebbene i pacchetti offrano indubbi vantaggi in termini di efficienza e funzionalità, un eccessivo affidamento ad essi può ostacolare la comprensione dei concetti fondamentali dell'analisi dati. Attraverso l'utilizzo di dati reali provenienti da studi e progetti di ricerca, questo corso colma il divario tra teoria e pratica, offrendo esempi concreti e applicabili per consolidare le vostre competenze.
-
-Nel corso della mia carriera, ho sperimentato in prima persona come l'analisi dei dati possa rivelare pattern nascosti, guidare decisioni informate e fornire una comprensione più profonda dei fenomeni agronomici. Spero sinceramente che possiate trovare in queste pagine non solo un percorso di apprendimento, ma anche un'autentica passione per l'analisi dei dati.
-
-Benvenuti nel mondo dell'analisi dati applicata all'agronomia. Buon divertimento!Benvenuti in un viaggio entusiasmante, dove scienza dei dati, statistica e agronomia si incontrano per rivoluzionare il futuro dell'agricoltura. Questo corso introduttivo, progettato per studenti di agronomia e scienze del suolo, vi guiderà attraverso esercitazioni pratiche di analisi dati per affrontare le sfide quotidiane nel campo della ricerca e della produzione agricola.
+Benvenuti in un viaggio entusiasmante, dove scienza dei dati, statistica e agronomia si incontrano per andare verso il futuro dell'agricoltura. Questo corso introduttivo, progettato per studenti delle scienze agrarie, vi guiderà attraverso esercitazioni pratiche di analisi dati per affrontare le sfide quotidiane nel campo della ricerca e della produzione agricola.
 
 L'analisi dei dati è diventata un pilastro fondamentale nella scienza moderna, aprendo nuove strade per soluzioni innovative, analisi approfondite e la garanzia di risultati riproducibili. Questo materiale, appositamente creato per studenti con poca o nessuna esperienza di analisi dati, vi accompagnerà passo dopo passo in questa avventura, partendo dai concetti base fino a raggiungere un livello di competenza che vi permetterà di esplorare, visualizzare, modellare e interpretare dati complessi.
 
