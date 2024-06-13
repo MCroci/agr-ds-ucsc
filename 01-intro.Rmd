@@ -1,3 +1,9 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
 # Coltivazioni erbacee
 
 ## Introduzione
@@ -34,12 +40,16 @@ I risultati delle prove condotte in Cina dimostrano l'importanza di un uso effic
 
 In conclusione, lo studio di Chen et al. (2011) sottolinea l'importanza di adottare un **approccio integrato** nella gestione del sistema suolo-coltura per massimizzare la produzione agricola e garantire la sicurezza alimentare. L'ottimizzazione dell'uso delle risorse, in particolare dell'azoto, e l'adozione di pratiche agricole efficienti sono fondamentali per raggiungere questo obiettivo.
 
-## Frumento
+## Cereali
 
-## Riso
+### Frumento
 
-## Orzo
+### Riso
 
-## Erba medica
+### Orzo
 
-## Mais
+### Erba medica
+
+### Mais
+
+### 

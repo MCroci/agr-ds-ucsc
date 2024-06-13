@@ -29,3 +29,6 @@ sharing-your-book-1
 publishing-1
 pages-1
 metadata-for-sharing-1
+url-your-book-url-like-httpsbookdown.orgyihuibookdown
+section
+cereali

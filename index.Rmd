@@ -1,18 +1,19 @@
 ---
 title: "Laboratorio di agronomia di precisione"
 author: "Michele Croci & .."
-date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
+date: '`r Sys.Date()`'
+output: pdf_document
 documentclass: book
-bibliography: [book.bib, packages.bib]
-# url: your book url like https://bookdown.org/yihui/bookdown
-# cover-image: path to the social sharing image like images/cover.jpg
+bibliography:
+- book.bib
+- packages.bib
 description: |
   This is a minimal example of using the bookdown package to write a book.
-  The HTML output format for this example is bookdown::gitbook,
   set in the _output.yml file.
+  The HTML output format for this example is bookdown::gitbook,
 link-citations: yes
-github-repo: rstudio/bookdown-demo
+github-repo: "rstudio/bookdown-demo"
+site: bookdown::bookdown_site
 ---
 
 # Prefazione
@@ -47,7 +48,7 @@ The goal of this book is to make you a **competent** (based on the [Dreyfus scal
 
 I truly hope you find both learning and enjoyment in these pages. Happy coding!
 
-**Michele Croci** \
+**Michele Croci**\
 Assistant Professor in Agronomy & Field Crops\
 Department of Sustainable Crop Production\
 Università Cattolica del Sacro Cuore
