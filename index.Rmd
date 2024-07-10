@@ -36,3 +36,7 @@ Buon divertimento!
 Assistant Professor in Agronomy & Field Crops\
 Department of Sustainable Crop Production\
 Università Cattolica del Sacro Cuore
+
+**License**
+
+All the code in these book has been written entirely by the author unless noted otherwise. The entire material is available for free under the Creative Commons Attribution-NonCommercial-ShareAlike ([CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/)) license

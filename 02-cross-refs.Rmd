@@ -16,29 +16,6 @@ There are two steps to cross-reference any heading:
 2.  Next, reference the labeled heading anywhere in the text using `\@ref(nice-label)`; for example, please see Chapter \@ref(cross).
     -   If you prefer text as the link instead of a numbered reference use: [any text you want can go here](#cross).
 
-```{r echo=TRUE, message=FALSE}
-# Addition
-11 + 2
-
-# Subtraction
-11 - 2  
-
-# Multiplication
-11 * 2
-
-# Division
-11 / 2
-
-# Integer Division (Floor Division Equivalent)
-11 %/% 2
-
-# Exponentiation
-11^2
-
-# Modulus
-11 %% 2
-```
-
 ## Captioned figures and tables
 
 Figures and tables *with captions* can also be cross-referenced from elsewhere in your book using `\@ref(fig:chunk-label)` and `\@ref(tab:chunk-label)`, respectively.
@@ -57,4 +34,103 @@ knitr::kable(
   head(pressure, 10), caption = 'Here is a nice table!',
   booktabs = TRUE
 )
+```
+
+```{r}
+library(tidyverse)
+# Function to simulate soil water balance
+soil_water_balance <- function(soil_params, rain, ET0, irrigation) {
+  
+  # Initialize soil water
+  available_water <- soil_params$InitialAmountOfAvailableWater
+  results <- data.frame(Day = 1:length(rain))
+  
+  # Loop through days
+  for (day in 1:length(rain)) {
+    
+    # Calculate transpiration
+    transpiration <- min(0.096 * available_water, ET0[day]) 
+    
+    # Calculate surface runoff (SCS method)
+    pot_max_ret <- (25400 / soil_params$RunoffCurveNumber) - 254
+    init_abs <- 0.2 * pot_max_ret
+    surface_runoff <- ifelse(rain[day] <= init_abs, 0,
+                             ((rain[day] - init_abs)^2) / (rain[day] - init_abs + pot_max_ret))
+    
+    # Calculate deep drainage
+    avail_water_before_drain <- available_water + rain[day] + irrigation[day] - transpiration - surface_runoff
+    deep_drainage <- ifelse(soil_params$WaterHoldingCapacity >= (avail_water_before_drain / soil_params$RootZoneDepth), 
+                            0, 
+                            soil_params$DrainageCoeff * soil_params$RootZoneDepth * 
+                              ((avail_water_before_drain / soil_params$RootZoneDepth) - soil_params$WaterHoldingCapacity))
+    
+    # Update available water
+    available_water <- available_water + rain[day] + irrigation[day] - transpiration - surface_runoff - deep_drainage
+    
+    # Store results
+    results$Rain[day] <- rain[day]
+    results$Deep_drain[day] <- deep_drainage
+    results$Run_off[day] <- surface_runoff
+    results$ET0[day] <- ET0[day]
+    results$Transpi[day] <- transpiration
+    results$Avlbl_water[day] <- available_water
+  }
+  
+  return(results)
+}
+
+# Example usage (replace with your actual data)
+soil_params <- list(
+  InitialAmountOfAvailableWater = 100,  # mm
+  RunoffCurveNumber = 85,
+  RootZoneDepth = 1,                     # m
+  DrainageCoeff = 0.1,
+  WaterHoldingCapacity = 0.2            # mm/mm
+)
+
+# Generate weather data for a year (365 days)
+set.seed(42)  # For reproducibility
+days <- 1:365
+
+# Rain: Simulate a seasonal pattern (higher in spring/fall)
+rain <- 20 * abs(sin(2 * pi * days / 365)) + rnorm(365, 0, 5)  # Seasonal + random noise
+
+# ET0: Simulate a seasonal pattern (higher in summer)
+ET0 <- 5 + 3 * abs(sin(2 * pi * (days - 90) / 365)) 
+
+# Irrigation: Two scenarios
+irrigation_scenario1 <- rep(0, 365)  # No irrigation
+irrigation_scenario2 <- ifelse(days >= 150 & days <= 200, 5, 0)  # 5 mm/day from June 1st to Sept 1st
+
+# Run the simulations for both scenarios
+results_scenario1 <- soil_water_balance(soil_params, rain, ET0, irrigation_scenario1)
+results_scenario2 <- soil_water_balance(soil_params, rain, ET0, irrigation_scenario2)
+```
+
+```{r}
+# Reshape data for plotting
+library(tidyr)
+results_long_scenario1 <- results_scenario1 %>%
+  pivot_longer(-Day, names_to = "Variable", values_to = "Value") %>%
+  mutate(Scenario = "No Irrigation")
+results_long_scenario2 <- results_scenario2 %>%
+  pivot_longer(-Day, names_to = "Variable", values_to = "Value") %>%
+  mutate(Scenario = "Irrigation")
+results_long <- rbind(results_long_scenario1, results_long_scenario2)
+
+```
+
+```{r}
+# Plot the results using ggplot2
+library(ggplot2)
+
+ggplot(results_long, aes(x = Day, y = Value, color = Scenario)) +
+  geom_line() +
+  facet_wrap(Variable~., scales = "free_y") +  # Separate plots for each scenario
+  labs(title = "Soil Water Balance Simulation", x = "Day of Year", y = "Water (mm)") +
+  scale_color_manual(values = c("Irrigation" = "blue", "No Irrigation" = "orange")) +
+  # scale_color_manual(values = c("Rain" = "blue", "Deep_drain" = "orange", 
+    #                            "Run_off" = "green", "ET0" = "red", 
+    #                           "Transpi" = "purple", "Avlbl_water" = "brown")) +
+  theme_minimal()
 ```

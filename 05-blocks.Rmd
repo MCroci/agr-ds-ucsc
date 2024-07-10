@@ -1,30 +1,63 @@
 # Fondamenti di agricoltura di precisione
 
+## Geomatica
+
+La geomatica può essere intesa come la scienza e l'insieme delle tecniche utilizzate per rispondere alle fondamentali domande connesse alla conoscenza qualitativa e quantitativa delle informazioni relative alla superficie terrestre (o a parti di essa) ed alle opere antropiche in essa presenti:
+
+-   Che cosa è (es. casa, strada, fiume, lago, particella, ecc...)
+
+-   Dove è (georeferenziazione)
+
+-   Quanto è (misura ed elaborazione)
+
+La geomatica viene applicata in tutte le discipline e le tecniche che si basano su dati spaziali georiferiti:
+
+-   Lo studio dell'ambiente e delle risorse naturali,
+-   La pianificazione e gestione ambientale e territoriale,
+-   La progettazione e realizzazione di opere di ingegneria,
+-   la navigazione e più in generale i trasporti,
+-   la geologia,
+-   la geofisica,
+-   la modellistica ambientale, climatica, meteorologica, agrometeo,
+-   la gestione dei dati catastali,
+-   l'**agricoltura**: 1. con applicazioni tradizionali (catasto di terreni, AGEA, SIAN,...) e 2. con l'agricoltura di precisione
+
+L'**anno zero** della geomatica è il **2004**, anno in cui Google compera Android e anche Google earth. In questo momento, operazioni che prima richiedevano software molto costosi (come ArcGIS, ArcInfo, ENVI, ERDAS) diventano gratuite (come Google Maps e QGIS). Prima di Google Maps, per avere delle mappe, si utilizzavano sistemi arcaici come Virgilio Mappe. Questi strumenti non erano neanche molto precisi.
+
+Un'esempio di come utilizzare la geomatica in agricoltura, sta nel temutissimo catasto dei terreni ovvero un foglio in cui vengoni inserite le particelle (fabbricati più terreni di un tal signore) e i relativi comuni. L'AGEA (ovvero Agenzia Generale Erogazione in Agricoltura) invece unisce le ortofoto (foto presa da google earth) ai dati catastali per controllare la veridicità dell'informazione. AGEA opera attraverso il SIAN (Sistema Informativo Agricolo Nazionale), il Geoportale Nazionale
+
+## Agricoltura di precisione
+
+E' l'applicazione di principi e tecnologie per la gestione della variabilità spaziale e temporale dei fattori connessi al processo produttivo agricolo, con lo scopo di migliorare la produzione e/o la sua qualità garantendo nel contempo migliori condizioni ambientali.
+
+In altri termini: applicare il giusto input, nella giusta quantità, al momento giusto, nel posto giusto, nel modo giusto. Il focus è sulla variabilità spaziale, specialmente quella intraparcellare.
+
+La chiave è nella georeferenziazione dei dati, ovvero dare un senso geografico (fornito di coordinate) al dato (pH, produttività, calcare,...).
+
+Il Sistema di Riferimento Globale per la georeferenziazione è WGS84 (che è l'ellissoide più famoso). I dati in forma di immagine o mappe di georeferenziazione si uniscono alle coordinate GPS del punto in cui ci troviamo tramite WGS84. Questo significa che dati indipendenti sono collegati tra di loro per via geografica.
+
 ## Equations
 
 Here is an equation.
 
+```{=tex}
 \begin{equation} 
   f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
   (\#eq:binom)
-\end{equation} 
-
+\end{equation}
+```
 You may refer to using `\@ref(eq:binom)`, like see Equation \@ref(eq:binom).
-
 
 ## Theorems and proofs
 
 Labeled theorems can be referenced in text using `\@ref(thm:tri)`, for example, check out this smart theorem \@ref(thm:tri).
 
-::: {.theorem #tri}
-For a right triangle, if $c$ denotes the *length* of the hypotenuse
-and $a$ and $b$ denote the lengths of the **other** two sides, we have
-$$a^2 + b^2 = c^2$$
+::: {#tri .theorem}
+For a right triangle, if $c$ denotes the *length* of the hypotenuse and $a$ and $b$ denote the lengths of the **other** two sides, we have $$a^2 + b^2 = c^2$$
 :::
 
 Read more here <https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html>.
 
 ## Callout blocks
 
-
-The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html
+The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: <https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html>

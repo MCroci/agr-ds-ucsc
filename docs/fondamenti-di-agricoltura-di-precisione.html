@@ -6,14 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 6 Fondamenti di agricoltura di precisione | Laboratorio di agronomia di precisione</title>
 <meta name="author" content="Michele Croci">
-<meta name="description" content="6.1 Equations Here is an equation. \[\begin{equation}  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}  \tag{6.1} \end{equation}\] You may refer to using \@ref(eq:binom), like see...">
+<meta name="description" content="6.1 Geomatica La geomatica può essere intesa come la scienza e l’insieme delle tecniche utilizzate per rispondere alle fondamentali domande connesse alla conoscenza qualitativa e quantitativa...">
 <meta name="generator" content="bookdown 0.39 with bs4_book()">
 <meta property="og:title" content="Chapter 6 Fondamenti di agricoltura di precisione | Laboratorio di agronomia di precisione">
 <meta property="og:type" content="book">
-<meta property="og:description" content="6.1 Equations Here is an equation. \[\begin{equation}  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}  \tag{6.1} \end{equation}\] You may refer to using \@ref(eq:binom), like see...">
+<meta property="og:description" content="6.1 Geomatica La geomatica può essere intesa come la scienza e l’insieme delle tecniche utilizzate per rispondere alle fondamentali domande connesse alla conoscenza qualitativa e quantitativa...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 6 Fondamenti di agricoltura di precisione | Laboratorio di agronomia di precisione">
-<meta name="twitter:description" content="6.1 Equations Here is an equation. \[\begin{equation}  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}  \tag{6.1} \end{equation}\] You may refer to using \@ref(eq:binom), like see...">
+<meta name="twitter:description" content="6.1 Geomatica La geomatica può essere intesa come la scienza e l’insieme delle tecniche utilizzate per rispondere alle fondamentali domande connesse alla conoscenza qualitativa e quantitativa...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.7.0/transition.js"></script><script src="libs/bs3compat-0.7.0/tabs.js"></script><script src="libs/bs3compat-0.7.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -84,32 +84,64 @@
 <h1>
 <span class="header-section-number">6</span> Fondamenti di agricoltura di precisione<a class="anchor" aria-label="anchor" href="#fondamenti-di-agricoltura-di-precisione"><i class="fas fa-link"></i></a>
 </h1>
-<div id="equations" class="section level2" number="6.1">
+<div id="geomatica" class="section level2" number="6.1">
 <h2>
-<span class="header-section-number">6.1</span> Equations<a class="anchor" aria-label="anchor" href="#equations"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.1</span> Geomatica<a class="anchor" aria-label="anchor" href="#geomatica"><i class="fas fa-link"></i></a>
+</h2>
+<p>La geomatica può essere intesa come la scienza e l’insieme delle tecniche utilizzate per rispondere alle fondamentali domande connesse alla conoscenza qualitativa e quantitativa delle informazioni relative alla superficie terrestre (o a parti di essa) ed alle opere antropiche in essa presenti:</p>
+<ul>
+<li><p>Che cosa è (es. casa, strada, fiume, lago, particella, ecc…)</p></li>
+<li><p>Dove è (georeferenziazione)</p></li>
+<li><p>Quanto è (misura ed elaborazione)</p></li>
+</ul>
+<p>La geomatica viene applicata in tutte le discipline e le tecniche che si basano su dati spaziali georiferiti:</p>
+<ul>
+<li>Lo studio dell’ambiente e delle risorse naturali,</li>
+<li>La pianificazione e gestione ambientale e territoriale,</li>
+<li>La progettazione e realizzazione di opere di ingegneria,</li>
+<li>la navigazione e più in generale i trasporti,</li>
+<li>la geologia,</li>
+<li>la geofisica,</li>
+<li>la modellistica ambientale, climatica, meteorologica, agrometeo,</li>
+<li>la gestione dei dati catastali,</li>
+<li>l’<strong>agricoltura</strong>: 1. con applicazioni tradizionali (catasto di terreni, AGEA, SIAN,…) e 2. con l’agricoltura di precisione</li>
+</ul>
+<p>L’<strong>anno zero</strong> della geomatica è il <strong>2004</strong>, anno in cui Google compera Android e anche Google earth. In questo momento, operazioni che prima richiedevano software molto costosi (come ArcGIS, ArcInfo, ENVI, ERDAS) diventano gratuite (come Google Maps e QGIS). Prima di Google Maps, per avere delle mappe, si utilizzavano sistemi arcaici come Virgilio Mappe. Questi strumenti non erano neanche molto precisi.</p>
+<p>Un’esempio di come utilizzare la geomatica in agricoltura, sta nel temutissimo catasto dei terreni ovvero un foglio in cui vengoni inserite le particelle (fabbricati più terreni di un tal signore) e i relativi comuni. L’AGEA (ovvero Agenzia Generale Erogazione in Agricoltura) invece unisce le ortofoto (foto presa da google earth) ai dati catastali per controllare la veridicità dell’informazione. AGEA opera attraverso il SIAN (Sistema Informativo Agricolo Nazionale), il Geoportale Nazionale</p>
+</div>
+<div id="agricoltura-di-precisione" class="section level2" number="6.2">
+<h2>
+<span class="header-section-number">6.2</span> Agricoltura di precisione<a class="anchor" aria-label="anchor" href="#agricoltura-di-precisione"><i class="fas fa-link"></i></a>
+</h2>
+<p>E’ l’applicazione di principi e tecnologie per la gestione della variabilità spaziale e temporale dei fattori connessi al processo produttivo agricolo, con lo scopo di migliorare la produzione e/o la sua qualità garantendo nel contempo migliori condizioni ambientali.</p>
+<p>In altri termini: applicare il giusto input, nella giusta quantità, al momento giusto, nel posto giusto, nel modo giusto. Il focus è sulla variabilità spaziale, specialmente quella intraparcellare.</p>
+<p>La chiave è nella georeferenziazione dei dati, ovvero dare un senso geografico (fornito di coordinate) al dato (pH, produttività, calcare,…).</p>
+<p>Il Sistema di Riferimento Globale per la georeferenziazione è WGS84 (che è l’ellissoide più famoso). I dati in forma di immagine o mappe di georeferenziazione si uniscono alle coordinate GPS del punto in cui ci troviamo tramite WGS84. Questo significa che dati indipendenti sono collegati tra di loro per via geografica.</p>
+</div>
+<div id="equations" class="section level2" number="6.3">
+<h2>
+<span class="header-section-number">6.3</span> Equations<a class="anchor" aria-label="anchor" href="#equations"><i class="fas fa-link"></i></a>
 </h2>
 <p>Here is an equation.</p>
-<p><span class="math display" id="eq:binom">\[\begin{equation}
+<span class="math display" id="eq:binom">\[\begin{equation}
   f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
   \tag{6.1}
-\end{equation}\]</span></p>
+\end{equation}\]</span>
 <p>You may refer to using <code>\@ref(eq:binom)</code>, like see Equation <a href="fondamenti-di-agricoltura-di-precisione.html#eq:binom">(6.1)</a>.</p>
 </div>
-<div id="theorems-and-proofs" class="section level2" number="6.2">
+<div id="theorems-and-proofs" class="section level2" number="6.4">
 <h2>
-<span class="header-section-number">6.2</span> Theorems and proofs<a class="anchor" aria-label="anchor" href="#theorems-and-proofs"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.4</span> Theorems and proofs<a class="anchor" aria-label="anchor" href="#theorems-and-proofs"><i class="fas fa-link"></i></a>
 </h2>
 <p>Labeled theorems can be referenced in text using <code>\@ref(thm:tri)</code>, for example, check out this smart theorem <a href="fondamenti-di-agricoltura-di-precisione.html#thm:tri">6.1</a>.</p>
 <div class="theorem">
-<p><span id="thm:tri" class="theorem"><strong>Theorem 6.1  </strong></span>For a right triangle, if <span class="math inline">\(c\)</span> denotes the <em>length</em> of the hypotenuse
-and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> denote the lengths of the <strong>other</strong> two sides, we have
-<span class="math display">\[a^2 + b^2 = c^2\]</span></p>
+<p><span id="thm:tri" class="theorem"><strong>Theorem 6.1  </strong></span>For a right triangle, if <span class="math inline">\(c\)</span> denotes the <em>length</em> of the hypotenuse and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> denote the lengths of the <strong>other</strong> two sides, we have <span class="math display">\[a^2 + b^2 = c^2\]</span></p>
 </div>
 <p>Read more here <a href="https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html" class="uri">https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html</a>.</p>
 </div>
-<div id="callout-blocks" class="section level2" number="6.3">
+<div id="callout-blocks" class="section level2" number="6.5">
 <h2>
-<span class="header-section-number">6.3</span> Callout blocks<a class="anchor" aria-label="anchor" href="#callout-blocks"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.5</span> Callout blocks<a class="anchor" aria-label="anchor" href="#callout-blocks"><i class="fas fa-link"></i></a>
 </h2>
 <p>The R Markdown Cookbook provides more help on how to use custom blocks to design your own callouts: <a href="https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html" class="uri">https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html</a></p>
 
@@ -122,9 +154,11 @@ and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
 <li><a class="nav-link" href="#fondamenti-di-agricoltura-di-precisione"><span class="header-section-number">6</span> Fondamenti di agricoltura di precisione</a></li>
-<li><a class="nav-link" href="#equations"><span class="header-section-number">6.1</span> Equations</a></li>
-<li><a class="nav-link" href="#theorems-and-proofs"><span class="header-section-number">6.2</span> Theorems and proofs</a></li>
-<li><a class="nav-link" href="#callout-blocks"><span class="header-section-number">6.3</span> Callout blocks</a></li>
+<li><a class="nav-link" href="#geomatica"><span class="header-section-number">6.1</span> Geomatica</a></li>
+<li><a class="nav-link" href="#agricoltura-di-precisione"><span class="header-section-number">6.2</span> Agricoltura di precisione</a></li>
+<li><a class="nav-link" href="#equations"><span class="header-section-number">6.3</span> Equations</a></li>
+<li><a class="nav-link" href="#theorems-and-proofs"><span class="header-section-number">6.4</span> Theorems and proofs</a></li>
+<li><a class="nav-link" href="#callout-blocks"><span class="header-section-number">6.5</span> Callout blocks</a></li>
 </ul>
 
       <div class="book-extra">
@@ -141,7 +175,7 @@ and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Laboratorio di agronomia di precisione</strong>" was written by Michele Croci. It was last built on 2024-06-14.</p>
+    <p>"<strong>Laboratorio di agronomia di precisione</strong>" was written by Michele Croci. It was last built on 2024-07-10.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

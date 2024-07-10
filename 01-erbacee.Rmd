@@ -1,0 +1,208 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# Coltivazioni erbacee
+
+## Introduzione
+
+Il corso di coltivazioni erbacee mira a fornire una conoscenza approfondita delle tecniche colturali relative alle specie erbacee di pieno campo, evidenziandone l'importanza nel contesto agricolo italiano ed europeo. L'obiettivo principale è acquisire competenze nella gestione delle principali coltivazioni, tenendo conto non solo degli aspetti economici, sempre più influenzati dal mercato globale, ma anche dell'impatto ambientale delle scelte colturali.
+
+Le **coltivazioni erbacee** sono estremamente diversificate e possono essere classificate in base a diversi criteri: - **Utilizzo finale**: cereali da olio, cereali da zucchero, ecc. - **Parte della pianta utilizzata:** fusto, radice, foglie, ecc. - **Tipo di coltivazione:** sarchiato, non sarchiato, ecc. - **Tradizionalità e innovazione:** colture tradizionali, alternative, o tradizionali con usi alternativi. - **Destinazione:** colture alimentari e non alimentari. - **Idoneità al set-aside:** colture coltivabili in regime di set-aside.
+
+Gli **obiettivi primari** delle coltivazioni erbacee sono molteplici: - Massimizzazione delle rese - Ottimizzazione della qualità (ad esempio, contenuto proteico o oleico dei semi) - Massimizzazione del reddito Efficienza nell'uso dei fattori produttivi - Minimizzazione dell'impatto ambientale
+
+L'agricoltura, nel corso della storia, ha permesso lo sviluppo della civiltà umana. Oggi, tuttavia, le scelte agricole devono considerare non solo la produttività, ma anche la sostenibilità ambientale. L'agricoltura moderna deve trovare un equilibrio tra la necessità di nutrire una popolazione in crescita e la salvaguardia dell'ambiente. L'inquinamento e il cambiamento climatico sono sfide cruciali che richiedono un approccio più sostenibile, come l'agricoltura integrata, che mira a ridurre l'impatto ambientale pur mantenendo rese soddisfacenti.
+
+L'agricoltura, oltre a essere un settore economico fondamentale, svolge un ruolo cruciale nella produzione di cibo, nella salvaguardia del territorio e nella tutela dell'ambiente. Negli ultimi anni, l'importanza dell'agricoltura non alimentare e della bioeconomia è cresciuta notevolmente. Le piante non vengono più utilizzate solo per scopi alimentari, ma anche per la produzione di biogas, biocarburanti, medicine, tessuti e altri materiali.
+
+Storicamente, l'agricoltura ha rappresentato il settore economico principale, impiegando una vasta percentuale della popolazione. Nei paesi sviluppati, questa percentuale è diminuita nel tempo, ma l'agricoltura rimane il settore primario, responsabile della produzione di cibo. A livello globale, l'agricoltura contribuisce in media per circa il 6% al PIL, mentre nei paesi sviluppati questa percentuale scende all'1-2%.
+
+I cereali, in particolare **frumento e riso**, sono fondamentali nell'alimentazione umana, fornendo circa il 46% delle calorie a livello globale. Le proteine animali contribuiscono per il 17% all'apporto calorico, mentre cereali e prodotti animali forniscono rispettivamente il 42% e il 39% delle proteine nella dieta umana.
+
+L'agricoltura contemporanea si trova ad affrontare la sfida di soddisfare i bisogni alimentari di una popolazione mondiale in crescita, che si prevede raggiungerà i 9 miliardi entro il 2050 e i 10 miliardi entro il 2100. Le sfide principali includono:
+
+Aumentare la produzione di cibo: per far fronte alla crescita demografica e combattere la malnutrizione, che è un problema non solo di quantità ma anche di qualità della dieta. Produrre materie prime ed energia: sviluppare colture per usi non alimentari, come la produzione di biocarburanti e biomateriali. Limitare il degrado ambientale: adottare pratiche agricole sostenibili per ridurre l'impatto ambientale dell'agricoltura. Per aumentare la produzione agricola, sono state considerate diverse opzioni:
+
+Espansione delle terre coltivate: questa opzione è stata scartata a causa del suo impatto negativo sull'ambiente, in particolare sulla deforestazione. Sfruttamento degli stock ittici: questa opzione presenta limitazioni a causa della capacità limitata degli ecosistemi marini. Aumento dei limiti di produzione: questa opzione è complessa e richiede un'attenta valutazione dei rischi ambientali e sanitari. Riduzione degli sprechi alimentari: questa opzione è considerata la più promettente e sostenibile, poiché una quantità significativa di cibo viene sprecata lungo la catena alimentare. La soluzione più efficace e sostenibile per aumentare la produzione agricola è il miglioramento dell'efficienza. Ciò significa ottimizzare l'uso delle risorse, come acqua, fertilizzanti e pesticidi, per ottenere rese più elevate senza aumentare l'impatto ambientale. La ricerca e lo sviluppo tecnologico svolgono un ruolo cruciale in questo processo, consentendo di sviluppare nuove varietà colturali, tecniche di coltivazione e sistemi di gestione più efficienti.
+
+Lo studio di Chen et al. (2011) sulla **gestione integrata suolo-coltura (ISSM)** per la sicurezza alimentare ha evidenziato l'importanza di un uso efficiente delle risorse per incrementare la produzione agricola e garantire la sicurezza alimentare. La ricerca sottolinea come l'adozione di nuove tecnologie e genotipi possa essere più complessa nei paesi più poveri (ad esempio, l'Africa subsahariana) rispetto a quelli in rapido sviluppo (ad esempio, la Cina).
+
+In Cina, nonostante l'ampio utilizzo di OGM, fertilizzanti e prodotti fitosanitari, l'efficienza produttiva risulta spesso limitata. Ad esempio, un aumento del 50% nell'uso di fertilizzanti ha portato ad un incremento della produzione di appena il 10%. Per affrontare questa sfida, Chen e i suoi colleghi hanno sviluppato un modello che, basandosi sugli input agronomici, permette di calcolare la biomassa ottenibile. Il modello include un modulo per la simulazione del suolo e un altro per la simulazione della coltura, considerando anche l'accrescimento radicale delle piante nel bilancio idrico e dell'azoto. L'analisi climatica si basa su medie a lungo termine.
+
+Attraverso simulazioni e confronti con le pratiche agricole effettive, i ricercatori hanno identificato combinazioni ottimali di input per massimizzare la produzione. In linea con i grafici di Tilman, lo studio conferma che, a parità di risorse, un utilizzo più efficiente di queste ultime può portare a notevoli miglioramenti nella produzione.
+
+In particolare, la **gestione dell'azoto** emerge come un fattore cruciale. Il modello suggerisce non solo di bilanciare l'azoto in base agli input e agli output, ma anche di frazionare la sua applicazione, concentrando le dosi maggiori nelle fasi di rapido accrescimento della pianta. Il calcolo del bilancio dell'azoto deve considerare la coltura specifica, le asportazioni, l'area coltivata e le aspettative di produzione.
+
+I risultati delle prove condotte in Cina dimostrano l'importanza di un uso efficiente dell'azoto. Ad esempio, una coltura di mais gestita con approcci ISSM (237 kg/ha di azoto e pratiche agricole avanzate) ha prodotto in media 13 t/ha, dimostrando una buona efficienza d'uso dell'azoto. Al contrario, una coltura fertilizzata con dosi eccessive di azoto (747 kg/ha), ma senza una gestione efficiente del sistema, ha prodotto solo 15,2 t/ha, evidenziando una scarsa efficienza d'uso.
+
+In conclusione, lo studio di Chen et al. (2011) sottolinea l'importanza di adottare un **approccio integrato** nella gestione del sistema suolo-coltura per massimizzare la produzione agricola e garantire la sicurezza alimentare. L'ottimizzazione dell'uso delle risorse, in particolare dell'azoto, e l'adozione di pratiche agricole efficienti sono fondamentali per raggiungere questo obiettivo.
+
+## Cereali
+
+### Frumento
+
+Il frumento, sia esso tenero (Triticum aestivum) originario del Medio Oriente, sia duro (Triticum durum) proveniente dall'Africa centro-orientale, è la coltura più diffusa al mondo. Cina, India e Russia sono i principali produttori, ma Stati Uniti, Francia, Canada e Australia guidano le esportazioni. L'Italia, pur al 17° posto per la produzione totale, è leader insieme a Turchia e Canada nella coltivazione del grano duro, concentrata nelle regioni centro-meridionali, mentre quello tenero è coltivato principalmente al centro-nord.
+
+Nonostante una superficie coltivata a frumento in diminuzione negli ultimi vent'anni (da 3,3 milioni di ettari nel 1984 agli attuali 2,35 milioni), con una produzione scesa da 10 a 8,64 milioni di tonnellate, il frumento resta una coltura fondamentale. Tuttavia, l'Italia non è autosufficiente e la dipendenza dalle importazioni è cresciuta nel tempo.
+
+In sintesi, il frumento rappresenta una risorsa agricola cruciale a livello globale e nazionale, con l'Italia che gioca un ruolo di primo piano nella produzione di grano duro. Nonostante ciò, la sfida dell'autosufficienza rimane aperta e richiede attenzione costante.
+
+#### Morfologia
+#### Ciclo vegetativo e riproduttivo
+#### Esigenze ambientali
+#### Tecnica colturale
+##### Avvicendamento
+
+##### Lavorazione del terreno
+
+##### Semina
+###### Epoca di semina
+###### Scelta del seme e della varietà
+###### Modalità e densità di semina
+###### Concia del seme
+
+##### Concimazione
+###### Concimazione di fondo (fosforo e potassio).
+###### Concimazione di copertura (azoto).
+
+##### Controllo delle erbe infestanti
+###### Diserbo chimico
+
+
+
+### Riso
+
+### Orzo
+
+### Erba medica
+
+### Mais
+
+## Fertilizzazione azotata
+
+### Campionamento del suolo
+
+#### Epoca di campionamento
+
+Deve essere scelta in funzione dello stato del terreno, che non dovrà essere né troppo secco né troppo umido. È opportuno intervenire in un momento sufficientemente lontano dagli interventi di lavorazione e di fertilizzazione; per le colture erbacee; l'epoca ottimale coincide con i giorni successivi alla raccolta, oppure almeno due mesi dopo l'ultimo apporto di concime.
+
+#### Modalità di campionamento
+
+Al fine di ottenere un campione rappresentativo, il prelevamento per le colture erbacee deve essere eseguito come segue:
+
+-   procedendo a zig zag nell'appezzamento, si devono individuare, a seconda dell'estensione, da 15 a 20 punti di prelievo di campioni elementari;
+
+-   nei punti segnati, dopo aver asportato e allontanato i primi 5 cm al fine di eliminare la cotica erbosa e gli eventuali detriti superficiali presenti, si effettua il prelievo fino ad una profondità di 30 cm (0-30cm);
+
+-   si sminuzza e si mescola accuratamente la terra proveniente dai prelievi eseguiti e, dopo aver rimosso ed allontanato pietre e materie organiche grossolane (radici, stoppie e residui
+
+[Come fare un campionamento di suolo?](https://www.youtube.com/watch?v=3_U9Z3fy0Ig)
+
+
+#### Analisi del terreno
+
+Le analisi fisico-chimiche costituiscono un importante strumento per una migliore conoscenza delle caratteristiche del terreno e bisogna quindi effettuare opportune analisi di laboratorio valutando i parametri e seguendo le metodologie più avanti specificate.
+
+I parametri richiesti nell'analisi sono almeno:
+
+-   granulometria (tessitura),
+
+-   pH in acqua,
+
+-   sostanza organica (S.O., %),
+
+-   calcare totale e calcare attivo,
+
+-   azoto totale (Ntotale, g/kg),
+
+-   potassio scambiabile e
+
+-   fosforo assimilabile.
+
+In generale, si valuta che le analisi possano conservare la loro validità per un periodo massimo di 5 anni scaduto il quale occorre procedere, per la formulazione del piano di fertilizzazione, a nuove determinazioni.
+
+| ID_Suo | Descrizione               | Classe     | Raggruppamento     | Gruppo                    |
+|--------------|--------------|--------------|--------------|----------------|
+| 1      | Sabbioso                  | Grossolana | Sabbiosi           | tendenzialmente sabbioso  |
+| 2      | Sabbioso Franco           | Grossolana | Sabbiosi           | tendenzialmente sabbioso  |
+| 3      | Limoso                    | Media      | Medio impasto      | franco                    |
+| 4      | Franco Sabbioso           | Media      | Sabbiosi           | tendenzialmente sabbioso  |
+| 5      | Franco                    | Media      | Medio impasto      | franco                    |
+| 6      | Franco Limoso             | Media      | Medio impasto      | franco                    |
+| 7      | Franco Sabbioso Argilloso | Media      | Medio impasto      | franco                    |
+| 8      | Franco Argilloso          | Media      | Medio impasto      | franco                    |
+| 9      | Franco Limoso Argilloso   | Media      | Argillosi e limosi | tendenzialmente argilloso |
+| 10     | Argilloso Sabbioso        | Fine       | Argillosi e limosi | tendenzialmente argilloso |
+| 11     | Argilloso Limoso          | Fine       | Argillosi e limosi | tendenzialmente argilloso |
+| 12     | Argilloso                 | Fine       | Argillosi e limosi | tendenzialmente argilloso |
+
+: Tabella x
+
+Per calcolare gli apporti di azoto da somministrare alla coltura, si applica la seguente relazione:
+
+Concimazione azotata (N) =
+
+fabbisogni colturali (A)
+
+-- apporti derivanti dalla fertilità del suolo (B)
+
+\+ perdite per lisciviazione (C)
+
+\+ perdite per immobilizzazione e dispersione (D)
+
+-- azoto da residui della coltura in precessione (E)
+
+-- azoto da fertilizzazioni organiche effettuate negli anni precedenti (F)
+
+-- apporti naturali (G).
+
+#### A. Fabbisogni colturali (kg·ha^-1^)
+
+I fabbisogni colturali tengono conto della necessità di azoto della coltura, determinato sia sulla base degli assorbimenti colturali unitari che dalla produzione attesa, secondo quanto di seguito indicato:
+
+**A = assorbimenti colturali unitari (%) x produzione attesa (t ha^-1^) x 10**
+
+Gli assorbimenti unitari di riferimento sono riportati nell'allegato 6.Per le colture arboree da frutto il fabbisogno può essere anche stimato calcolando solo l'effettiva asportazione operata con la raccolta dei frutti (vedi allegato 6) a cui bisognerà però aggiungere una quota di azoto necessaria a sostenere la crescita annuale (quota di base, in kg, vedi Allegato 8).
+
+| Coltura                                    | N    | P2O5 | K2O  | Tipo Coeff. (\*\*) |
+|--------------------------|------------|------------|------------|------------|
+| Barbababietola da zucchero (pianta intera) | 0.31 | 0.16 | 0.33 | asp                |
+| Grano duro (pianta intera)                 | 3.11 | 1.06 | 1.99 | ass                |
+| Grano duro (granella)                      | 2.42 | 0.85 | 0.59 | asp                |
+| Grano tenero FP/FPS (granella)             | 2.41 | 0.78 | 0.50 | asp.               |
+| Grano tenero FP/FPS (pianta intera)        | 2.96 | 0.98 | 1.87 | ass.               |
+| Grano tenero biscottiero (granella)        | 2.08 | 0.98 | 0.61 | asp.               |
+
+: Tabella 2. Coefficienti di assorbimento e asportazione delle colture per N, P2O5 e K2O in % .
+
+(\**)* i coefficienti di asportazione sono quelli che considerano le quantità di elemento che escono dal campo con la raccolta della parte utile della pianta; mentre sono considerati di assorbimento quando comprendono anche le quantità di elemento che si localizzano nelle parti della pianta non raccolte e che rimangono in campo.
+
+| Fase colturale/Ciclo                       | coefficiente | Esempio coltura     |
+|-------------------------------|------------|-----------------|
+| Prati pluriennali                          | 1.00         | erba medica 2° anno |
+| a ciclo primaverile estivo \> 130 gg       | 0.75         | Mais classe 600     |
+| a ciclo primaverile estivo da 100 a 130 gg | 0.67         | Mais classe 300     |
+| a ciclo primaverile estivo da 70 a 100 gg  | 0.50         | Melone              |
+| a ciclo primaverile estivo \< 70 gg        | 0.30         | Lattuga             |
+| a ciclo autunno vernino \> 150 gg          | 0.60         | Frumento            |
+| a ciclo autunno vernino \< 150 gg          | 0.50         | Pisello proteico    |
+| in secondo raccolto                        | 0.35         | Mais dopo loiessa   |
+| pluriennali in produzione                  | 1.00         | Asparago            |
+
+: Tabella x. Scelta del "coefficiente tempo" per coltura, stagione di crescita e lunghezza del ciclo. I valori riportati in tabella sono da ritenersi indicativi perché possono variare in relazione all'effettiva lunghezza del ciclo e alla stagione di crescita
+
+
+#### B. Apporti di azoto derivanti dalla fertilità del suolo  (kg·ha^-1^)
+
+
+
+### Esercizio 1
+
+### Esercizio 2
+
+## Irrigazione
+
+### Sistemi di irrigazione

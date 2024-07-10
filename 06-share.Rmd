@@ -1,8 +1,22 @@
 # Telerilevamento satellitare
 
-## Publishing
+## Definizioni di telerilevamento
 
-HTML books can be published online, see: https://bookdown.org/yihui/bookdown/publishing.html
+Tre sono le più comuni definizioni che vengono date per il telerilevamento:
+
+-   Il telerilevamento è la scienza di acquisire, elaborare e interpretare immagini che registrano l'interazione tra l'energia elettromagnetica e la materia;
+
+-   Il telerilevamento è la scienza o l'arte di ottenere informazioni circa un oggetto, un'area, o un fenomeno attraverso l'analisi di dati acquisiti per mezzo di un dispositivo che non è in contatto con l'oggetto, l'area o il fenomeno sotto esame.
+
+-   Il telerilevamento è l'insieme della strumentazione, delle tecniche e dei metodi per osservare la superficie terrestre a distanza e per interpretare le immagini o i valori numerici ottenuti in modo da acquisire informazioni significative di oggetti particolari sulla Terra.
+
+Comune alle tre definizioni è il fatto che i dati riguardanti le caratteristiche della superficie terrestre sono acquisiti con un dispositivo che non è in contatto con gli oggetti che si misurano. Il risultato è solitamente immagazzinato sotto forma di immagini. Le caratteristiche misurate dai sensori sono l'energia elettromagnetica emessa e riflessa dalla superficie terrestre. Questa energia riguarda alcune parti specifiche dello spettro elettromagnetico: di solito la luce visibile, ma anche l'infrarosso o le onde radio.
+
+L'energia elettromagnetica generata da una opportuna sorgente (o dall'oggetto stesso) interagisce con l'oggetto osservato (fenomeni di riflessione, diffusione, assorbimento ecc) e di conseguenza si modifica. Tale radiazione si propaga e viene misurata e registrata da un sensore remoto. Analizzando e interpretando tali misure di campo elettromagnetico è possibile risalire alle proprietà di interesse dell'oggetto. Per particolari applicazioni geofisiche vengono usati altri tipi di campo, quali quello gravitazionale e magnetico della Terra e il campo di pressione (onde acustiche); basti pensare al sonar o semplicemente all'eco scandaglio per il sondaggio del fondale marino da imbarcazioni.
+
+L'oggetto osservato può essere di varia natura; noi ci riferiremo a quei casi in cui esso è costituito dal nostro pianeta, la Terra, nelle sue diverse componenti (atmosfera, terre emerse, biosfera, oceani, ghiacci) che interagiscono tra loro attraverso processi chimico-fisici fondamentali per la conservazione della vita sul pianeta.
+
+## Energia elettromagnetica e il telerilevamento
 
 ## 404 pages
 
@@ -12,20 +26,16 @@ By default, users will be directed to a 404 page if they try to access a webpage
 
 Bookdown HTML books will provide HTML metadata for social sharing on platforms like Twitter, Facebook, and LinkedIn, using information you provide in the `index.Rmd` YAML. To setup, set the `url` for your book and the path to your `cover-image` file. Your book's `title` and `description` are also used.
 
-
-
 This `gitbook` uses the same social sharing data across all chapters in your book- all links shared will look the same.
 
-Specify your book's source repository on GitHub using the `edit` key under the configuration options in the `_output.yml` file, which allows users to suggest an edit by linking to a chapter's source file. 
+Specify your book's source repository on GitHub using the `edit` key under the configuration options in the `_output.yml` file, which allows users to suggest an edit by linking to a chapter's source file.
 
 Read more about the features of this output format here:
 
-https://pkgs.rstudio.com/bookdown/reference/gitbook.html
+<https://pkgs.rstudio.com/bookdown/reference/gitbook.html>
 
 Or use:
 
 ```{r eval=FALSE}
 ?bookdown::gitbook
 ```
-
-

@@ -105,34 +105,6 @@
 </ul>
 </li>
 </ol>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Addition</span></span>
-<span><span class="fl">11</span> <span class="op">+</span> <span class="fl">2</span></span></code></pre></div>
-<pre><code>## [1] 13</code></pre>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Subtraction</span></span>
-<span><span class="fl">11</span> <span class="op">-</span> <span class="fl">2</span>  </span></code></pre></div>
-<pre><code>## [1] 9</code></pre>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Multiplication</span></span>
-<span><span class="fl">11</span> <span class="op">*</span> <span class="fl">2</span></span></code></pre></div>
-<pre><code>## [1] 22</code></pre>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Division</span></span>
-<span><span class="fl">11</span> <span class="op">/</span> <span class="fl">2</span></span></code></pre></div>
-<pre><code>## [1] 5.5</code></pre>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Integer Division (Floor Division Equivalent)</span></span>
-<span><span class="fl">11</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html">%/%</a></span> <span class="fl">2</span></span></code></pre></div>
-<pre><code>## [1] 5</code></pre>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Exponentiation</span></span>
-<span><span class="fl">11</span><span class="op">^</span><span class="fl">2</span></span></code></pre></div>
-<pre><code>## [1] 121</code></pre>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Modulus</span></span>
-<span><span class="fl">11</span> <span class="op"><a href="https://rdrr.io/r/base/Arithmetic.html">%%</a></span> <span class="fl">2</span></span></code></pre></div>
-<pre><code>## [1] 1</code></pre>
 </div>
 <div id="captioned-figures-and-tables" class="section level2" number="3.2">
 <h2>
@@ -140,7 +112,7 @@
 </h2>
 <p>Figures and tables <em>with captions</em> can also be cross-referenced from elsewhere in your book using <code>\@ref(fig:chunk-label)</code> and <code>\@ref(tab:chunk-label)</code>, respectively.</p>
 <p>See Figure <a href="modelli-di-simulazione-delle-colture.html#fig:nice-fig">3.1</a>.</p>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html">par</a></span><span class="op">(</span>mar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">4</span>, <span class="fl">4</span>, <span class="fl">.1</span>, <span class="fl">.1</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">pressure</span>, type <span class="op">=</span> <span class="st">'b'</span>, pch <span class="op">=</span> <span class="fl">19</span><span class="op">)</span></span></code></pre></div>
 <div class="figure" style="text-align: center">
@@ -150,7 +122,7 @@ Figure 3.1: Here is a nice figure!
 </p>
 </div>
 <p>Don’t miss Table <a href="modelli-di-simulazione-delle-colture.html#tab:nice-tab">3.1</a>.</p>
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/kable.html">kable</a></span><span class="op">(</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">pressure</span>, <span class="fl">10</span><span class="op">)</span>, caption <span class="op">=</span> <span class="st">'Here is a nice table!'</span>,</span>
 <span>  booktabs <span class="op">=</span> <span class="cn">TRUE</span></span>
@@ -205,6 +177,118 @@ Figure 3.1: Here is a nice figure!
 </tr>
 </tbody>
 </table></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code></pre></div>
+<pre><code>## Warning: il pacchetto 'tidyverse' è stato creato con R versione 4.3.2</code></pre>
+<pre><code>## Warning: il pacchetto 'ggplot2' è stato creato con R versione 4.3.3</code></pre>
+<pre><code>## Warning: il pacchetto 'tidyr' è stato creato con R versione 4.3.3</code></pre>
+<pre><code>## Warning: il pacchetto 'readr' è stato creato con R versione 4.3.3</code></pre>
+<pre><code>## Warning: il pacchetto 'dplyr' è stato creato con R versione 4.3.3</code></pre>
+<pre><code>## Warning: il pacchetto 'stringr' è stato creato con R versione 4.3.2</code></pre>
+<pre><code>## Warning: il pacchetto 'lubridate' è stato creato con R versione 4.3.2</code></pre>
+<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+## ✔ dplyr     1.1.4     ✔ readr     2.1.5
+## ✔ forcats   1.0.0     ✔ stringr   1.5.1
+## ✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+## ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+## ✔ purrr     1.0.2     
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Function to simulate soil water balance</span></span>
+<span><span class="va">soil_water_balance</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">soil_params</span>, <span class="va">rain</span>, <span class="va">ET0</span>, <span class="va">irrigation</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  </span>
+<span>  <span class="co"># Initialize soil water</span></span>
+<span>  <span class="va">available_water</span> <span class="op">&lt;-</span> <span class="va">soil_params</span><span class="op">$</span><span class="va">InitialAmountOfAvailableWater</span></span>
+<span>  <span class="va">results</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>Day <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">rain</span><span class="op">)</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="co"># Loop through days</span></span>
+<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">day</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">rain</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    </span>
+<span>    <span class="co"># Calculate transpiration</span></span>
+<span>    <span class="va">transpiration</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="fl">0.096</span> <span class="op">*</span> <span class="va">available_water</span>, <span class="va">ET0</span><span class="op">[</span><span class="va">day</span><span class="op">]</span><span class="op">)</span> </span>
+<span>    </span>
+<span>    <span class="co"># Calculate surface runoff (SCS method)</span></span>
+<span>    <span class="va">pot_max_ret</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="fl">25400</span> <span class="op">/</span> <span class="va">soil_params</span><span class="op">$</span><span class="va">RunoffCurveNumber</span><span class="op">)</span> <span class="op">-</span> <span class="fl">254</span></span>
+<span>    <span class="va">init_abs</span> <span class="op">&lt;-</span> <span class="fl">0.2</span> <span class="op">*</span> <span class="va">pot_max_ret</span></span>
+<span>    <span class="va">surface_runoff</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">rain</span><span class="op">[</span><span class="va">day</span><span class="op">]</span> <span class="op">&lt;=</span> <span class="va">init_abs</span>, <span class="fl">0</span>,</span>
+<span>                             <span class="op">(</span><span class="op">(</span><span class="va">rain</span><span class="op">[</span><span class="va">day</span><span class="op">]</span> <span class="op">-</span> <span class="va">init_abs</span><span class="op">)</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span> <span class="op">/</span> <span class="op">(</span><span class="va">rain</span><span class="op">[</span><span class="va">day</span><span class="op">]</span> <span class="op">-</span> <span class="va">init_abs</span> <span class="op">+</span> <span class="va">pot_max_ret</span><span class="op">)</span><span class="op">)</span></span>
+<span>    </span>
+<span>    <span class="co"># Calculate deep drainage</span></span>
+<span>    <span class="va">avail_water_before_drain</span> <span class="op">&lt;-</span> <span class="va">available_water</span> <span class="op">+</span> <span class="va">rain</span><span class="op">[</span><span class="va">day</span><span class="op">]</span> <span class="op">+</span> <span class="va">irrigation</span><span class="op">[</span><span class="va">day</span><span class="op">]</span> <span class="op">-</span> <span class="va">transpiration</span> <span class="op">-</span> <span class="va">surface_runoff</span></span>
+<span>    <span class="va">deep_drainage</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">soil_params</span><span class="op">$</span><span class="va">WaterHoldingCapacity</span> <span class="op">&gt;=</span> <span class="op">(</span><span class="va">avail_water_before_drain</span> <span class="op">/</span> <span class="va">soil_params</span><span class="op">$</span><span class="va">RootZoneDepth</span><span class="op">)</span>, </span>
+<span>                            <span class="fl">0</span>, </span>
+<span>                            <span class="va">soil_params</span><span class="op">$</span><span class="va">DrainageCoeff</span> <span class="op">*</span> <span class="va">soil_params</span><span class="op">$</span><span class="va">RootZoneDepth</span> <span class="op">*</span> </span>
+<span>                              <span class="op">(</span><span class="op">(</span><span class="va">avail_water_before_drain</span> <span class="op">/</span> <span class="va">soil_params</span><span class="op">$</span><span class="va">RootZoneDepth</span><span class="op">)</span> <span class="op">-</span> <span class="va">soil_params</span><span class="op">$</span><span class="va">WaterHoldingCapacity</span><span class="op">)</span><span class="op">)</span></span>
+<span>    </span>
+<span>    <span class="co"># Update available water</span></span>
+<span>    <span class="va">available_water</span> <span class="op">&lt;-</span> <span class="va">available_water</span> <span class="op">+</span> <span class="va">rain</span><span class="op">[</span><span class="va">day</span><span class="op">]</span> <span class="op">+</span> <span class="va">irrigation</span><span class="op">[</span><span class="va">day</span><span class="op">]</span> <span class="op">-</span> <span class="va">transpiration</span> <span class="op">-</span> <span class="va">surface_runoff</span> <span class="op">-</span> <span class="va">deep_drainage</span></span>
+<span>    </span>
+<span>    <span class="co"># Store results</span></span>
+<span>    <span class="va">results</span><span class="op">$</span><span class="va">Rain</span><span class="op">[</span><span class="va">day</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">rain</span><span class="op">[</span><span class="va">day</span><span class="op">]</span></span>
+<span>    <span class="va">results</span><span class="op">$</span><span class="va">Deep_drain</span><span class="op">[</span><span class="va">day</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">deep_drainage</span></span>
+<span>    <span class="va">results</span><span class="op">$</span><span class="va">Run_off</span><span class="op">[</span><span class="va">day</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">surface_runoff</span></span>
+<span>    <span class="va">results</span><span class="op">$</span><span class="va">ET0</span><span class="op">[</span><span class="va">day</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">ET0</span><span class="op">[</span><span class="va">day</span><span class="op">]</span></span>
+<span>    <span class="va">results</span><span class="op">$</span><span class="va">Transpi</span><span class="op">[</span><span class="va">day</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">transpiration</span></span>
+<span>    <span class="va">results</span><span class="op">$</span><span class="va">Avlbl_water</span><span class="op">[</span><span class="va">day</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">available_water</span></span>
+<span>  <span class="op">}</span></span>
+<span>  </span>
+<span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="va">results</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="co"># Example usage (replace with your actual data)</span></span>
+<span><span class="va">soil_params</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span></span>
+<span>  InitialAmountOfAvailableWater <span class="op">=</span> <span class="fl">100</span>,  <span class="co"># mm</span></span>
+<span>  RunoffCurveNumber <span class="op">=</span> <span class="fl">85</span>,</span>
+<span>  RootZoneDepth <span class="op">=</span> <span class="fl">1</span>,                     <span class="co"># m</span></span>
+<span>  DrainageCoeff <span class="op">=</span> <span class="fl">0.1</span>,</span>
+<span>  WaterHoldingCapacity <span class="op">=</span> <span class="fl">0.2</span>            <span class="co"># mm/mm</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Generate weather data for a year (365 days)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">42</span><span class="op">)</span>  <span class="co"># For reproducibility</span></span>
+<span><span class="va">days</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="fl">365</span></span>
+<span></span>
+<span><span class="co"># Rain: Simulate a seasonal pattern (higher in spring/fall)</span></span>
+<span><span class="va">rain</span> <span class="op">&lt;-</span> <span class="fl">20</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">abs</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Trig.html">sin</a></span><span class="op">(</span><span class="fl">2</span> <span class="op">*</span> <span class="va">pi</span> <span class="op">*</span> <span class="va">days</span> <span class="op">/</span> <span class="fl">365</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">365</span>, <span class="fl">0</span>, <span class="fl">5</span><span class="op">)</span>  <span class="co"># Seasonal + random noise</span></span>
+<span></span>
+<span><span class="co"># ET0: Simulate a seasonal pattern (higher in summer)</span></span>
+<span><span class="va">ET0</span> <span class="op">&lt;-</span> <span class="fl">5</span> <span class="op">+</span> <span class="fl">3</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">abs</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Trig.html">sin</a></span><span class="op">(</span><span class="fl">2</span> <span class="op">*</span> <span class="va">pi</span> <span class="op">*</span> <span class="op">(</span><span class="va">days</span> <span class="op">-</span> <span class="fl">90</span><span class="op">)</span> <span class="op">/</span> <span class="fl">365</span><span class="op">)</span><span class="op">)</span> </span>
+<span></span>
+<span><span class="co"># Irrigation: Two scenarios</span></span>
+<span><span class="va">irrigation_scenario1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">365</span><span class="op">)</span>  <span class="co"># No irrigation</span></span>
+<span><span class="va">irrigation_scenario2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">days</span> <span class="op">&gt;=</span> <span class="fl">150</span> <span class="op">&amp;</span> <span class="va">days</span> <span class="op">&lt;=</span> <span class="fl">200</span>, <span class="fl">5</span>, <span class="fl">0</span><span class="op">)</span>  <span class="co"># 5 mm/day from June 1st to Sept 1st</span></span>
+<span></span>
+<span><span class="co"># Run the simulations for both scenarios</span></span>
+<span><span class="va">results_scenario1</span> <span class="op">&lt;-</span> <span class="fu">soil_water_balance</span><span class="op">(</span><span class="va">soil_params</span>, <span class="va">rain</span>, <span class="va">ET0</span>, <span class="va">irrigation_scenario1</span><span class="op">)</span></span>
+<span><span class="va">results_scenario2</span> <span class="op">&lt;-</span> <span class="fu">soil_water_balance</span><span class="op">(</span><span class="va">soil_params</span>, <span class="va">rain</span>, <span class="va">ET0</span>, <span class="va">irrigation_scenario2</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Reshape data for plotting</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyr.tidyverse.org">tidyr</a></span><span class="op">)</span></span>
+<span><span class="va">results_long_scenario1</span> <span class="op">&lt;-</span> <span class="va">results_scenario1</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span><span class="op">-</span><span class="va">Day</span>, names_to <span class="op">=</span> <span class="st">"Variable"</span>, values_to <span class="op">=</span> <span class="st">"Value"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>Scenario <span class="op">=</span> <span class="st">"No Irrigation"</span><span class="op">)</span></span>
+<span><span class="va">results_long_scenario2</span> <span class="op">&lt;-</span> <span class="va">results_scenario2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span><span class="op">-</span><span class="va">Day</span>, names_to <span class="op">=</span> <span class="st">"Variable"</span>, values_to <span class="op">=</span> <span class="st">"Value"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>Scenario <span class="op">=</span> <span class="st">"Irrigation"</span><span class="op">)</span></span>
+<span><span class="va">results_long</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span><span class="op">(</span><span class="va">results_long_scenario1</span>, <span class="va">results_long_scenario2</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Plot the results using ggplot2</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">results_long</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Day</span>, y <span class="op">=</span> <span class="va">Value</span>, color <span class="op">=</span> <span class="va">Scenario</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="va">Variable</span><span class="op">~</span><span class="va">.</span>, scales <span class="op">=</span> <span class="st">"free_y"</span><span class="op">)</span> <span class="op">+</span>  <span class="co"># Separate plots for each scenario</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Soil Water Balance Simulation"</span>, x <span class="op">=</span> <span class="st">"Day of Year"</span>, y <span class="op">=</span> <span class="st">"Water (mm)"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_color_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Irrigation"</span> <span class="op">=</span> <span class="st">"blue"</span>, <span class="st">"No Irrigation"</span> <span class="op">=</span> <span class="st">"orange"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="co"># scale_color_manual(values = c("Rain" = "blue", "Deep_drain" = "orange", </span></span>
+<span>    <span class="co">#                            "Run_off" = "green", "ET0" = "red", </span></span>
+<span>    <span class="co">#                           "Transpi" = "purple", "Avlbl_water" = "brown")) +</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="_main_files/figure-html/unnamed-chunk-3-1.png" width="672"></div>
+
 </div>
 </div>
   <div class="chapter-nav">
@@ -232,7 +316,7 @@ Figure 3.1: Here is a nice figure!
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Laboratorio di agronomia di precisione</strong>" was written by Michele Croci. It was last built on 2024-06-14.</p>
+    <p>"<strong>Laboratorio di agronomia di precisione</strong>" was written by Michele Croci. It was last built on 2024-07-10.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
