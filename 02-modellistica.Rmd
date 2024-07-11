@@ -124,7 +124,7 @@ results_long <- rbind(results_long_scenario1, results_long_scenario2)
 # Plot the results using ggplot2
 library(ggplot2)
 
-ggplot(results_long, aes(x = Day, y = Value, color = Scenario)) +
+p <- ggplot(results_long, aes(x = Day, y = Value, color = Scenario)) +
   geom_line() +
   facet_wrap(Variable~., scales = "free_y") +  # Separate plots for each scenario
   labs(title = "Soil Water Balance Simulation", x = "Day of Year", y = "Water (mm)") +
@@ -133,4 +133,6 @@ ggplot(results_long, aes(x = Day, y = Value, color = Scenario)) +
     #                            "Run_off" = "green", "ET0" = "red", 
     #                           "Transpi" = "purple", "Avlbl_water" = "brown")) +
   theme_minimal()
+
+print(p)
 ```

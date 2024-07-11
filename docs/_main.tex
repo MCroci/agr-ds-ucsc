@@ -120,7 +120,7 @@
 
 \title{Laboratorio di agronomia di precisione}
 \author{Michele Croci}
-\date{2024-07-10}
+\date{2024-07-11}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[chapter]
@@ -745,7 +745,7 @@ temperature & pressure\\
 \CommentTok{\# Plot the results using ggplot2}
 \FunctionTok{library}\NormalTok{(ggplot2)}
 
-\FunctionTok{ggplot}\NormalTok{(results\_long, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ Day, }\AttributeTok{y =}\NormalTok{ Value, }\AttributeTok{color =}\NormalTok{ Scenario)) }\SpecialCharTok{+}
+\NormalTok{p }\OtherTok{\textless{}{-}} \FunctionTok{ggplot}\NormalTok{(results\_long, }\FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ Day, }\AttributeTok{y =}\NormalTok{ Value, }\AttributeTok{color =}\NormalTok{ Scenario)) }\SpecialCharTok{+}
   \FunctionTok{geom\_line}\NormalTok{() }\SpecialCharTok{+}
   \FunctionTok{facet\_wrap}\NormalTok{(Variable}\SpecialCharTok{\textasciitilde{}}\NormalTok{., }\AttributeTok{scales =} \StringTok{"free\_y"}\NormalTok{) }\SpecialCharTok{+}  \CommentTok{\# Separate plots for each scenario}
   \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Soil Water Balance Simulation"}\NormalTok{, }\AttributeTok{x =} \StringTok{"Day of Year"}\NormalTok{, }\AttributeTok{y =} \StringTok{"Water (mm)"}\NormalTok{) }\SpecialCharTok{+}
@@ -754,6 +754,8 @@ temperature & pressure\\
     \CommentTok{\#                            "Run\_off" = "green", "ET0" = "red", }
     \CommentTok{\#                           "Transpi" = "purple", "Avlbl\_water" = "brown")) +}
   \FunctionTok{theme\_minimal}\NormalTok{()}
+
+\FunctionTok{print}\NormalTok{(p)}
 \end{Highlighting}
 \end{Shaded}
 
